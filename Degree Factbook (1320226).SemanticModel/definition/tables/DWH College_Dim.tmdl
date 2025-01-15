@@ -1,0 +1,65 @@
+table 'DWH College_Dim'
+	lineageTag: 13e67e98-df16-4029-a7ad-1c35cc55ac85
+
+	column College_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d6a40d65-222f-406a-852d-ac0b9202e37b
+		summarizeBy: none
+		sourceColumn: College_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column College_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 20ef1b6a-759d-4a74-a017-204f2aec0cd1
+		summarizeBy: none
+		sourceColumn: College_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column College_Name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: f1b7f9fe-75e0-484e-b10a-7b73a7f94f09
+		summarizeBy: none
+		sourceColumn: College_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column College
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 4cd7fbdc-f521-4df5-9751-9667d2d3f7fc
+		summarizeBy: none
+		sourceColumn: College
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ca4591e8-9609-466c-a478-10f2a43cbe41
+		summarizeBy: none
+		sourceColumn: Active_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH College_Dim-bbe33582-f5f6-48ef-ac5c-0afa33f66977' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_College_Dim = Source{[Schema="DWH",Item="College_Dim"]}[Data]
+				in
+				    DWH_College_Dim
+
+	annotation PBI_ResultType = Table
+

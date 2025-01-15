@@ -1,0 +1,105 @@
+table 'DWH Degree_Major_Fact'
+	lineageTag: 1e1ad3ec-f993-413a-bbf6-ffbb9aded96f
+
+	column Degree_Major_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 52575454-485f-43b5-832d-99311a1eb04c
+		summarizeBy: none
+		sourceColumn: Degree_Major_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Degree_Fact_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: ed7977ef-8308-4f6e-b01a-68204d8b88d3
+		summarizeBy: none
+		sourceColumn: Degree_Fact_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Type
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(20)
+		lineageTag: d90830ca-2980-4cd6-bf18-4cd3ba34d169
+		summarizeBy: none
+		sourceColumn: Major_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 77360a24-b5c6-4774-a8c8-03f86d51951a
+		summarizeBy: none
+		sourceColumn: Major_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GPA_Major
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 217db703-bd51-40ad-98c5-f4df07b48769
+		summarizeBy: average
+		sourceColumn: GPA_Major
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ETL_Timestamp
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 77c06e21-ec52-41ae-941a-1d9c4bfd2b94
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 6b557b5e-04da-448b-ad63-dcedd2eafc69
+			defaultHierarchy: LocalDateTable_c876d008-2333-4656-86c0-af6ca83e7926.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Minor_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1e4f2d42-e3d4-4e17-ad02-4b41a5eb5a40
+		summarizeBy: none
+		sourceColumn: Minor_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Degree_Major_Fact' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Degree_Major_Fact = Source{[Schema="DWH",Item="Degree_Major_Fact"]}[Data]
+				in
+				    DWH_Degree_Major_Fact
+
+	annotation PBI_ResultType = Table
+

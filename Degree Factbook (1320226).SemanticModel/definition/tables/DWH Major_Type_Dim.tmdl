@@ -1,0 +1,43 @@
+table 'DWH Major_Type_Dim'
+	lineageTag: c79bc03a-a9b0-48c6-a271-f207023d4a61
+
+	column Major_Type_Key
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3090d8a8-43d6-44a8-86de-03913ab82054
+		summarizeBy: none
+		sourceColumn: Major_Type_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Type
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: 0b968109-c411-41c3-b41c-5fe5ae9b906d
+		summarizeBy: none
+		sourceColumn: Major_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Or_Minor
+		dataType: string
+		sourceProviderType: varchar(5)
+		lineageTag: 043641e7-f6b7-4c06-bcf6-e2a6d9d16fc4
+		summarizeBy: none
+		sourceColumn: Major_Or_Minor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Major_Type_Dim' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Major_Type_Dim = Source{[Schema="DWH",Item="Major_Type_Dim"]}[Data]
+				in
+				    DWH_Major_Type_Dim
+
+	annotation PBI_ResultType = Table
+

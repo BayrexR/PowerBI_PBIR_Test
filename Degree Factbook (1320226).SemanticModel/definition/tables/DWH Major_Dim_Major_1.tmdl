@@ -1,0 +1,143 @@
+table 'DWH Major_Dim_Major_1'
+	lineageTag: 4b5a6f30-1a87-48b0-9c27-8773150cf654
+
+	column Major_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 79179599-ed23-47bd-93e9-fa25abca0858
+		summarizeBy: none
+		sourceColumn: Major_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Code
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: b0c499f5-54f9-4478-8226-ecaccd1e2783
+		summarizeBy: none
+		sourceColumn: Major_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Description
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 7d0e1e95-b32e-48bf-997c-011520937c18
+		summarizeBy: none
+		sourceColumn: Major_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_CIP_Code
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 57580936-34b5-4d1a-afcd-982c4f4f8b6a
+		summarizeBy: none
+		sourceColumn: Major_CIP_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity_Date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 18d7ab41-088a-4b72-8864-3b6ba514ee14
+		summarizeBy: none
+		sourceColumn: Activity_Date
+
+		variation Variation
+			isDefault
+			relationship: 50155805-687e-4604-99fe-79e0f4690449
+			defaultHierarchy: LocalDateTable_b28cf827-f8ef-4829-819b-baf02558ae7d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: e98f8640-6eeb-4e4d-bfed-b9db02862828
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 5c7a3793-255b-4585-a1de-90c192d07d4d
+			defaultHierarchy: LocalDateTable_0ed03d9b-2e11-4b1b-b305-2c7a7e23044f.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Interest_Slate
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 63286903-d487-4ae5-863c-135f40b1c511
+		summarizeBy: none
+		sourceColumn: Academic_Interest_Slate
+
+		annotation SummarizationSetBy = Automatic
+
+	column STEM_Designated_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3bc60c98-e5e7-4310-b3b8-8566d33679b5
+		summarizeBy: sum
+		sourceColumn: STEM_Designated_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: acd97dad-38fe-4aa5-acf9-888654996246
+		summarizeBy: none
+		sourceColumn: Major
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valid_Major_Yes_No
+		dataType: string
+		sourceProviderType: varchar(3)
+		lineageTag: a7e7affb-41b2-41d5-9d86-2f4566b53e90
+		summarizeBy: none
+		sourceColumn: Valid_Major_Yes_No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valid_Minor_Yes_No
+		dataType: string
+		sourceProviderType: varchar(3)
+		lineageTag: 0e33db82-94b5-4187-a787-b919531f7875
+		summarizeBy: none
+		sourceColumn: Valid_Minor_Yes_No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valid_Concentration_Yes_No
+		dataType: string
+		sourceProviderType: varchar(3)
+		lineageTag: 24197cfd-312f-4d20-980d-9be1236aa942
+		summarizeBy: none
+		sourceColumn: Valid_Concentration_Yes_No
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Major_Dim_Major_1-edebf0d0-113a-434e-80b3-4df3be89e8e5' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Major_Dim = Source{[Schema="DWH",Item="Major_Dim"]}[Data]
+				in
+				    DWH_Major_Dim
+
+	annotation PBI_ResultType = Table
+

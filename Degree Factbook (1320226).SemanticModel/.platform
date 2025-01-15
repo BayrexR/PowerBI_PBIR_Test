@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Degree Factbook (1320226)"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "61f0eb16-6f85-4534-b6cc-6f30631756c7"
+  }
+}

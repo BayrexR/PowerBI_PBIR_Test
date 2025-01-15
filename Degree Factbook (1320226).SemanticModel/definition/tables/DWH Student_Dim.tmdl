@@ -1,0 +1,2392 @@
+table 'DWH Student_Dim'
+	lineageTag: c1d7cb83-a89b-4ed4-be52-ea614375bd86
+
+	column Student_Key
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6bd2b1d3-c6b4-47fe-8871-821ddd78526f
+		summarizeBy: none
+		sourceColumn: Student_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Banner_PIDM
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ef87359c-1149-4b99-a724-5cb7fd317da2
+		summarizeBy: sum
+		sourceColumn: Banner_PIDM
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column RNumber
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 0db68cfe-200d-4527-8cf8-ec2a981f4258
+		summarizeBy: none
+		sourceColumn: RNumber
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Student_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c269c8ba-9ac1-47fe-87df-a84084873bcc
+		summarizeBy: sum
+		sourceColumn: Active_Student_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Registered_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0f6bbf9a-2244-4187-bc9e-671d8d29b55d
+		summarizeBy: sum
+		sourceColumn: Registered_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enrolled_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fdbfaa6f-d5ff-482a-9799-1e24ff85ad94
+		summarizeBy: sum
+		sourceColumn: Enrolled_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FoxId
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 3ef2bcd9-5e8a-4eff-a0fb-6f00723e97cd
+		summarizeBy: none
+		sourceColumn: FoxId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Full_Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 66863e37-10ff-45bb-93cb-57bf179ac19a
+		summarizeBy: none
+		sourceColumn: Full_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Preferred_Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: f3f38156-ae20-4454-b23c-ee339c9ac5d3
+		summarizeBy: none
+		sourceColumn: Preferred_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column First_Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 6a4ade3b-5a63-48cb-9e6e-01ed77a5f0b2
+		summarizeBy: none
+		sourceColumn: First_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Last_Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: f48e7e7b-57f6-425a-9fc6-1a4d1f64bb63
+		summarizeBy: none
+		sourceColumn: Last_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Middle_Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: d4d96a3f-82c5-4216-8732-a51797e78849
+		summarizeBy: none
+		sourceColumn: Middle_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name_Prefix
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: ec068232-754f-4239-b444-0a5a4914431b
+		summarizeBy: none
+		sourceColumn: Name_Prefix
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name_Suffix
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: a0d27f87-8f39-467c-828a-17da69a8d696
+		summarizeBy: none
+		sourceColumn: Name_Suffix
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Last_First_Middle_Name
+		dataType: string
+		sourceProviderType: varchar(303)
+		lineageTag: a8c76086-06e2-4be1-8551-8cde76fd6d99
+		summarizeBy: none
+		sourceColumn: Last_First_Middle_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Marital_Status
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 9c3aef36-f563-4070-b1f0-dcb657ac8de9
+		summarizeBy: none
+		sourceColumn: Marital_Status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email_Address_Rollins
+		dataType: string
+		sourceProviderType: varchar(128)
+		lineageTag: 84f80f89-4358-4232-9f9f-57664565e8a7
+		summarizeBy: none
+		sourceColumn: Email_Address_Rollins
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email_Address
+		dataType: string
+		sourceProviderType: varchar(128)
+		lineageTag: c3710d7b-81db-435f-9203-c122124747cf
+		summarizeBy: none
+		sourceColumn: Email_Address
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone_Daytime
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: a694021e-1a11-4394-ad87-d849131abb00
+		summarizeBy: none
+		sourceColumn: Phone_Daytime
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone_Mobile
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 19c4775e-45d3-4268-b0a9-3b72e9311f99
+		summarizeBy: none
+		sourceColumn: Phone_Mobile
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sex_Code
+		dataType: string
+		sourceProviderType: varchar(1)
+		lineageTag: a2fef44f-4605-47a4-98f5-1baff06a3e11
+		summarizeBy: none
+		sourceColumn: Sex_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sex
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 3ad4a55f-ca83-4465-b5f2-57039b447ba2
+		summarizeBy: none
+		sourceColumn: Sex
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender_Code
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: 36976d48-1906-45dd-8358-1787635751f4
+		summarizeBy: none
+		sourceColumn: Gender_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		sourceProviderType: varchar(60)
+		lineageTag: 0cba6111-000f-4d63-9c9f-7170eb3819ca
+		summarizeBy: none
+		sourceColumn: Gender
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Birth_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 388695da-d75c-4def-bf51-e2b7b596fe69
+		summarizeBy: none
+		sourceColumn: Birth_Date
+
+		variation Variation
+			isDefault
+			relationship: 3688adba-d0e1-45a6-929d-f9865f8d0571
+			defaultHierarchy: LocalDateTable_872569ac-657d-426e-b4f1-de428cdc8404.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Birth_Date_YYYYMMDD
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: b497b5d0-f125-43bc-b777-a03a51c44df7
+		summarizeBy: none
+		sourceColumn: Birth_Date_YYYYMMDD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Birth_Date_MMDDYYYY
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 8fb2c4cb-f1fb-483e-a8cc-239239320ebc
+		summarizeBy: none
+		sourceColumn: Birth_Date_MMDDYYYY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Birth_Date_MonDDYYYY
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 44790d9e-b389-45ce-9a38-008f4dc0c92e
+		summarizeBy: none
+		sourceColumn: Birth_Date_MonDDYYYY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 81d0d14d-1001-49ed-b4fd-a5a2632c0c16
+		summarizeBy: sum
+		sourceColumn: Age
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Deceased_Status
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: c9655ded-381e-4e60-ae9b-a09fcaa0d600
+		summarizeBy: none
+		sourceColumn: Deceased_Status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Deceased_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 9805b4f9-4c4e-4fec-9200-d45d3d64076a
+		summarizeBy: none
+		sourceColumn: Deceased_Date
+
+		variation Variation
+			isDefault
+			relationship: 408c1bb9-1f63-4792-8e8b-10635dd8aa87
+			defaultHierarchy: LocalDateTable_d374da25-3649-4a5c-abda-60a020518896.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Confidentiality_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 713dc3e8-cf8d-47f7-bd7a-7dee113eee27
+		summarizeBy: sum
+		sourceColumn: Confidentiality_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Full_Time_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 452142d7-affe-46b2-920c-0e6041f41f12
+		summarizeBy: sum
+		sourceColumn: Full_Time_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Race_Ethnicity
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 174f1a7e-0f01-4832-9b0e-72651d768875
+		summarizeBy: none
+		sourceColumn: Race_Ethnicity
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Race_Ethnicity_Current
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 6b2e9176-071d-4259-a651-e9fa84257547
+		summarizeBy: none
+		sourceColumn: Race_Ethnicity_Current
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hispanic_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9aa2fdc3-b3a3-43d0-80a8-b19006c3c28b
+		summarizeBy: sum
+		sourceColumn: Hispanic_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hispanic_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9e96800c-d2dd-4cf6-bc02-562aa38f95ee
+		summarizeBy: sum
+		sourceColumn: Hispanic_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Am_Indian_or_Alaska_Native_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9836a60d-8e78-48c7-8c91-78f0a1c594a0
+		summarizeBy: sum
+		sourceColumn: Am_Indian_or_Alaska_Native_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Am_Indian_or_Alaskan_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 16e5f84a-6a59-40a3-8172-1a0cabcbe753
+		summarizeBy: sum
+		sourceColumn: Am_Indian_or_Alaskan_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asian_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 16693f7a-7938-4c21-a771-51e2f2ebe403
+		summarizeBy: sum
+		sourceColumn: Asian_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asian_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3b5defc8-f8b2-4231-9768-2d01ded49f6a
+		summarizeBy: sum
+		sourceColumn: Asian_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Black_or_African_American_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 06649373-afc7-4b33-aee4-8f1ee461aae1
+		summarizeBy: sum
+		sourceColumn: Black_or_African_American_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Black_or_African_Amer_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8eeed9a0-fff1-4999-88aa-da76d23d79f1
+		summarizeBy: sum
+		sourceColumn: Black_or_African_Amer_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pacific_Islands_American_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 626281ac-e69a-430f-a681-83a3a2d3deb6
+		summarizeBy: sum
+		sourceColumn: Pacific_Islands_American_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pacific_Islands_Amer_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: efe70427-ec4a-492d-8457-1fd12633dc7a
+		summarizeBy: sum
+		sourceColumn: Pacific_Islands_Amer_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Non_Resident_Alien_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e0e50247-620d-41a6-b26f-b6ae3fca87c0
+		summarizeBy: sum
+		sourceColumn: Non_Resident_Alien_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Non_Resident_Alien_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 71685837-b09a-4c48-b76b-400ef42e4d36
+		summarizeBy: sum
+		sourceColumn: Non_Resident_Alien_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column White_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 622d72f5-dffe-48b9-bda4-7c2dde2d2f54
+		summarizeBy: sum
+		sourceColumn: White_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column White_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ec6d5512-1496-4e47-aef4-6692bf3bb89f
+		summarizeBy: sum
+		sourceColumn: White_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Two_Or_More_Races_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f8767da2-95a3-4d06-bbae-b5d27ab454e0
+		summarizeBy: sum
+		sourceColumn: Two_Or_More_Races_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Two_Or_More_Races_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8ef5cd6b-79ff-4b19-a5a8-64e53f7058e4
+		summarizeBy: sum
+		sourceColumn: Two_Or_More_Races_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unknown_Race_Ethnicity_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ab7d0f15-260c-483a-bfdb-3bf19eafbdba
+		summarizeBy: sum
+		sourceColumn: Unknown_Race_Ethnicity_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unknown_Race_Ethnicity_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d137e778-b2fc-4ba5-b2b2-b41bdccbd728
+		summarizeBy: sum
+		sourceColumn: Unknown_Race_Ethnicity_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Minority_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9410e554-23cd-4a17-9dc4-4693423acad6
+		summarizeBy: sum
+		sourceColumn: Minority_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Minority_Ind_Cur
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 54ae6146-b3c8-45ea-9070-5c64117a0653
+		summarizeBy: sum
+		sourceColumn: Minority_Ind_Cur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Citizenship_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: cb02f878-ae15-4df8-ad3a-74c19532e89a
+		summarizeBy: none
+		sourceColumn: Citizenship_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Citizenship
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 0a99f248-c435-4a4c-9813-16bc86f85d5a
+		summarizeBy: none
+		sourceColumn: Citizenship
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Citizenship_Country
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 5aa9ad26-bd4a-4dbc-8138-c41df147b9c3
+		summarizeBy: none
+		sourceColumn: Citizenship_Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Birth_Country
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 7e1b4d7e-dcc2-4e90-b61f-35b6135af168
+		summarizeBy: none
+		sourceColumn: Birth_Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column US_Citizen_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c159e7f5-727e-4c91-86fb-5cd9a7afcfa5
+		summarizeBy: sum
+		sourceColumn: US_Citizen_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column US_Resident_Alien_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 50cb15f3-1aa3-4807-b023-978b1e5a1eb1
+		summarizeBy: sum
+		sourceColumn: US_Resident_Alien_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Visa_Type_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: b111a212-5409-4cc6-a180-cb8363a81f0c
+		summarizeBy: none
+		sourceColumn: Visa_Type_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Visa_Type_Desc
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 586a92c6-52e9-4c75-82fd-d5e491ee142c
+		summarizeBy: none
+		sourceColumn: Visa_Type_Desc
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column First_Generation_Reported_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f6178812-0e3a-4dff-a2de-b172332a592a
+		summarizeBy: sum
+		sourceColumn: First_Generation_Reported_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column First_Generation_FAFSA_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b3e871c7-2ee0-47c2-9888-cb24433b6911
+		summarizeBy: sum
+		sourceColumn: First_Generation_FAFSA_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Athlete_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c3d86554-fc73-4403-8715-e5d944c1cc72
+		summarizeBy: sum
+		sourceColumn: Athlete_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Commuter_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0b42981c-b0cc-4463-aa6f-989823a7f087
+		summarizeBy: sum
+		sourceColumn: Commuter_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column On_Campus_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b7597c60-d050-4554-bfca-83f22be24def
+		summarizeBy: sum
+		sourceColumn: On_Campus_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Res_Hall_Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 4993648e-249d-4cb8-8d18-f2043525eba3
+		summarizeBy: none
+		sourceColumn: Res_Hall_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Res_Hall_Room_Occupancy
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a4708000-37aa-4ac1-a507-a0fe09e1c0a6
+		summarizeBy: sum
+		sourceColumn: Res_Hall_Room_Occupancy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Res_Hall_Room_Occupancy_Count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9bacbc6d-ed9b-4c6f-8cd4-a67fd1508cbe
+		summarizeBy: sum
+		sourceColumn: Res_Hall_Room_Occupancy_Count
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Res_Hall_Room_Type
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 1438ee06-2f24-40b4-8435-5cced47cec4a
+		summarizeBy: none
+		sourceColumn: Res_Hall_Room_Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Veteran_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2bc12c9e-3789-4516-ab22-8b86bcc803e2
+		summarizeBy: sum
+		sourceColumn: Veteran_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Home_School_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dcf9c030-e2cf-4147-87f3-47c9b3cf5b9d
+		summarizeBy: sum
+		sourceColumn: Home_School_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GPA_HS_Before_Fall_2018
+		dataType: double
+		sourceProviderType: decimal(11, 3)
+		lineageTag: 9c3265da-bb91-49ee-b088-5363370fcbed
+		summarizeBy: sum
+		sourceColumn: GPA_HS_Before_Fall_2018
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GPA_HS_Unweighted_Fr_Fall_2018
+		dataType: double
+		sourceProviderType: decimal(11, 3)
+		lineageTag: fa1268be-3619-4697-a171-cd0d9e05c6e5
+		summarizeBy: sum
+		sourceColumn: GPA_HS_Unweighted_Fr_Fall_2018
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RGPA_High_School
+		dataType: double
+		sourceProviderType: decimal(11, 3)
+		lineageTag: 84700857-78d0-4ed8-aa11-11bc9acb35bb
+		summarizeBy: sum
+		sourceColumn: RGPA_High_School
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Test_Score_Waived_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7c187843-6a84-4e66-887c-d39dbd5e0e5a
+		summarizeBy: sum
+		sourceColumn: Test_Score_Waived_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column High_School_Graduation_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 74729e6e-2c55-46a0-a562-240e88a36e21
+		summarizeBy: none
+		sourceColumn: High_School_Graduation_Date
+
+		variation Variation
+			isDefault
+			relationship: bfbd338a-cc7b-435c-b2f3-d9c39a77645c
+			defaultHierarchy: LocalDateTable_18c6c88b-a3cb-4025-98d1-477a0035c0e3.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column High_School_Transcript_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 637ec41e-5fa3-4c4f-8209-1a91d8006225
+		summarizeBy: none
+		sourceColumn: High_School_Transcript_Date
+
+		variation Variation
+			isDefault
+			relationship: e7ffc41c-01d8-4032-9e37-d1d6d02e8acd
+			defaultHierarchy: LocalDateTable_83cc8f35-bc0f-4a53-9a2c-7c4f6c739aa8.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column High_School_CEEB_Code
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 877d5950-99e7-43d4-8e8e-9544a8fafc7e
+		summarizeBy: none
+		sourceColumn: High_School_CEEB_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column High_School_Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: a921394b-d535-41ac-abcb-c00ece54367c
+		summarizeBy: none
+		sourceColumn: High_School_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column High_School_City
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: c439e3a9-5a25-4760-877d-66323bce8982
+		summarizeBy: none
+		sourceColumn: High_School_City
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column High_School_State
+		dataType: string
+		sourceProviderType: varchar(64)
+		lineageTag: a34da9c4-f2fd-4aea-ab5b-c5a960424fd6
+		summarizeBy: none
+		sourceColumn: High_School_State
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column High_School_Zip
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 0a428e50-fbcf-4238-aabb-6329fedf6dfb
+		summarizeBy: none
+		sourceColumn: High_School_Zip
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column High_School_NCES
+		dataType: string
+		sourceProviderType: varchar(15)
+		lineageTag: 7342eddf-4718-4b93-9b6c-ee9dbc1782f3
+		summarizeBy: none
+		sourceColumn: High_School_NCES
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column In_State_Resident_Ind_By_FAFSA
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 111cfc17-5eb4-4ea0-9054-32f9c06887a6
+		summarizeBy: sum
+		sourceColumn: In_State_Resident_Ind_By_FAFSA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column In_State_Resident_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a5f91c6a-a40d-4d2c-8b9c-31a568ac053c
+		summarizeBy: sum
+		sourceColumn: In_State_Resident_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column In_State_Resident_Ind_Address
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9e12eaab-fa7d-40d4-a942-1e7426656131
+		summarizeBy: sum
+		sourceColumn: In_State_Resident_Ind_Address
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column In_State_Resident_Ind_School
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6db55ea4-615b-4ed1-8aeb-b239bbbaf47c
+		summarizeBy: sum
+		sourceColumn: In_State_Resident_Ind_School
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column High_School_Sub_Region
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 6ec1795c-6bdd-433d-b4c0-1f702a109775
+		summarizeBy: none
+		sourceColumn: High_School_Sub_Region
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column High_School_Geo_Region
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: fc4a79e9-ec8b-4eb0-b6bf-e5be090cfbb6
+		summarizeBy: none
+		sourceColumn: High_School_Geo_Region
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column College_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: c7792c47-e1ec-4815-8e5a-e0815194815f
+		summarizeBy: none
+		sourceColumn: College_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column College_Code_Modified
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: a74ba11b-bb83-4f2c-a6d2-e65cf03d99e9
+		summarizeBy: none
+		sourceColumn: College_Code_Modified
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column College
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 4540818d-8123-4582-a4a7-fc40279dae7b
+		summarizeBy: none
+		sourceColumn: College
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column College_Modified
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: d162fae0-cc12-4a3d-b74f-1d51d5afe116
+		summarizeBy: none
+		sourceColumn: College_Modified
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Campus_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 634caf9d-6853-422a-b46f-7b0ae234e71f
+		summarizeBy: none
+		sourceColumn: Campus_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Campus
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: ed7e5b16-a76b-414b-9a90-a08da32a9ff6
+		summarizeBy: none
+		sourceColumn: Campus
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Code_Admit
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: cd6952c7-40b7-4d10-8442-04b4ffbb3a78
+		summarizeBy: none
+		sourceColumn: Term_Code_Admit
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Code_Last_Registered
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: c4e32ae1-5390-43f0-92da-68ed9a100b6d
+		summarizeBy: none
+		sourceColumn: Term_Code_Last_Registered
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Code_Most_Recent
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 72e38169-bd75-4687-8cca-7f86ee25657b
+		summarizeBy: none
+		sourceColumn: Term_Code_Most_Recent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Code_Entry
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 40e75b9d-a4b7-4955-b8fc-14a4bf971858
+		summarizeBy: none
+		sourceColumn: Term_Code_Entry
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admit_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 6501f5d9-5a14-4e2d-8e0c-a0c872128363
+		summarizeBy: none
+		sourceColumn: Admit_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admit_Description
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: e8113661-f827-438a-a876-4b3d8f7a98ba
+		summarizeBy: none
+		sourceColumn: Admit_Description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Application_Decision_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 608cfc64-83ab-49ac-b7ae-9d8bebf88529
+		summarizeBy: none
+		sourceColumn: Application_Decision_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Application_Decision
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 34ce0126-2c30-4858-8702-4d03cd1d334d
+		summarizeBy: none
+		sourceColumn: Application_Decision
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Application_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: bdd440db-4e61-444d-bef7-4a7abdbf57a5
+		summarizeBy: none
+		sourceColumn: Application_Date
+
+		variation Variation
+			isDefault
+			relationship: 1be05828-da06-4397-8e3a-5c2ecc5d2e6a
+			defaultHierarchy: LocalDateTable_0564416c-efce-4192-be8e-797636a87f68.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Application_Decision_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 9737d247-07d4-4058-b789-1c582191d7fc
+		summarizeBy: none
+		sourceColumn: Application_Decision_Date
+
+		variation Variation
+			isDefault
+			relationship: 85dd7e2f-0ad9-44ba-82bc-db4f39baf409
+			defaultHierarchy: LocalDateTable_38a121f3-8ec0-4ee9-82b0-5a4669aa1c02.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Cohort_US_Abroad_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 54f64d9b-28ed-4a52-9323-aa1c964b93fb
+		summarizeBy: sum
+		sourceColumn: Cohort_US_Abroad_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cohort_Code
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 7d3967f9-8603-467b-a182-dd555f6f929c
+		summarizeBy: none
+		sourceColumn: Cohort_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cohort
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 96e7f4f4-7677-42f0-90ac-41304929e709
+		summarizeBy: none
+		sourceColumn: Cohort
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Status_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: b7e282bd-2ae6-4c54-ae9f-6d809e321c78
+		summarizeBy: none
+		sourceColumn: Student_Status_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Status
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: c93609d3-1ad7-4da3-8e7a-637282cefcec
+		summarizeBy: none
+		sourceColumn: Student_Status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Level_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: ff7745ff-479c-42ec-b8cd-317852f77e97
+		summarizeBy: none
+		sourceColumn: Student_Level_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Level
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 821680b9-8ebf-4588-a558-6ba61b61887f
+		summarizeBy: none
+		sourceColumn: Student_Level
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Type_Code_First_Appl
+		dataType: string
+		sourceProviderType: varchar(1)
+		lineageTag: 5f4e6ff8-932e-47c1-940e-4bbf858ef8c4
+		summarizeBy: none
+		sourceColumn: Student_Type_Code_First_Appl
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Type_First_Appl
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 2c5b8664-36dc-46da-9ae4-78f0c1a313c3
+		summarizeBy: none
+		sourceColumn: Student_Type_First_Appl
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Type_Code_Last_Appl
+		dataType: string
+		sourceProviderType: varchar(1)
+		lineageTag: 912a77b0-3cf3-4971-b799-16672f65b8a2
+		summarizeBy: none
+		sourceColumn: Student_Type_Code_Last_Appl
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Type_Last_Appl
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 6be01e02-9604-466a-9a42-9279140585a0
+		summarizeBy: none
+		sourceColumn: Student_Type_Last_Appl
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Type_Code
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(1)
+		lineageTag: 1a08527a-f388-4db7-abc3-a1ca801ed851
+		summarizeBy: none
+		sourceColumn: Student_Type_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Type
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 7123ea9e-4441-4ea7-b0f1-86c9ef1f8cd8
+		summarizeBy: none
+		sourceColumn: Student_Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Class_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: db7fb435-ef0a-468f-8548-9f6675da939d
+		summarizeBy: none
+		sourceColumn: Student_Class_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Class
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 2ce37d46-8d67-41c5-8553-c7739c629041
+		summarizeBy: none
+		sourceColumn: Student_Class
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Withdrawn_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 09970d57-2708-4199-ac2a-a3f7996a4b1a
+		summarizeBy: sum
+		sourceColumn: Withdrawn_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Leave_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 078c773e-ca04-4a63-b206-1ba0aabeea15
+		summarizeBy: sum
+		sourceColumn: Leave_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Program
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 8e92ce95-88db-4591-8cd8-1794398b30c4
+		summarizeBy: none
+		sourceColumn: Program
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_First_Declared_CIPC
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 2a41c3c8-71a9-44cd-acb6-f8faae51b148
+		summarizeBy: none
+		sourceColumn: Major_1_First_Declared_CIPC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_First_Declared_Code
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: bd9b0157-ff28-4799-ba68-c36b8beeadbc
+		summarizeBy: none
+		sourceColumn: Major_1_First_Declared_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_First_Declared
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: b8d690e4-c60e-479b-800d-f1023db29358
+		summarizeBy: none
+		sourceColumn: Major_1_First_Declared
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_First_Declared_Term
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 9e52ddae-f4ca-49dc-afcf-df94b5899467
+		summarizeBy: none
+		sourceColumn: Major_1_First_Declared_Term
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_First_Year_CIP_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 370e7464-4edb-4a33-a9e9-c9374d7c127d
+		summarizeBy: none
+		sourceColumn: Major_First_Year_CIP_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_First_Year
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 0a60627a-9deb-4141-8ec7-334ee1a7b7c8
+		summarizeBy: none
+		sourceColumn: Major_First_Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_Code
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: 8f0d24c9-9606-4031-948d-d1fc8df3e126
+		summarizeBy: none
+		sourceColumn: Major_1_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_CIP_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: d5ab2820-3f05-47a1-a41e-33c88c956af2
+		summarizeBy: none
+		sourceColumn: Major_1_CIP_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 5c273464-4359-473a-b5fb-57d9ffbc4e15
+		summarizeBy: none
+		sourceColumn: Major_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_2_Code
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: a877501e-1dda-4f60-b3be-2727e2655fe6
+		summarizeBy: none
+		sourceColumn: Major_1_2_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_2_CIP_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 38f23de9-b262-4902-8475-f80dd0cd4bbc
+		summarizeBy: none
+		sourceColumn: Major_1_2_CIP_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_2
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: ce363e92-47da-4632-b4ad-df61b4a879cb
+		summarizeBy: none
+		sourceColumn: Major_1_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_1_Code
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: 47150e12-cd78-48e9-9c34-09cd0ba1f08a
+		summarizeBy: none
+		sourceColumn: Major_Minor_1_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_1_CIP_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 51cf0583-3e91-4dc9-bdfd-24be4aafb89f
+		summarizeBy: none
+		sourceColumn: Major_Minor_1_CIP_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_1
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 74b8448f-a131-41c7-a275-32b706a5ac1a
+		summarizeBy: none
+		sourceColumn: Major_Minor_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_1_2_Code
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: d2b63bf0-00cb-4ee6-b682-4170124a2091
+		summarizeBy: none
+		sourceColumn: Major_Minor_1_2_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_1_2_CIP_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: c1d263f3-19b3-4dac-af1f-2730c0522d84
+		summarizeBy: none
+		sourceColumn: Major_Minor_1_2_CIP_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_1_2
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 8e692ea4-dbd2-42c6-a05e-ddeabf7de479
+		summarizeBy: none
+		sourceColumn: Major_Minor_1_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Interest_CIP_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: ddcca828-4ca2-48d3-884d-99a98afb8d3d
+		summarizeBy: none
+		sourceColumn: Academic_Interest_CIP_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Interest
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 08cc8bd7-adb5-4022-ad83-8ebe4d47ecf4
+		summarizeBy: none
+		sourceColumn: Academic_Interest
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Associate_Degree_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 78544074-70f2-4850-946b-64c44071cf55
+		summarizeBy: sum
+		sourceColumn: Associate_Degree_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Associate_Degree
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 5bf325b6-ae36-40ca-aa59-86bc54ec21f5
+		summarizeBy: none
+		sourceColumn: Associate_Degree
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Associate_Degree_Institution_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 79652440-cd63-41ff-9cec-56c153526c8e
+		summarizeBy: none
+		sourceColumn: Associate_Degree_Institution_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Associate_Degree_Institution
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 1763817b-da01-493a-a088-46390ab7203f
+		summarizeBy: none
+		sourceColumn: Associate_Degree_Institution
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Associate_Degree_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: d3ee5ee1-bdee-4a10-b405-4e4ec6e114d9
+		summarizeBy: none
+		sourceColumn: Associate_Degree_Date
+
+		variation Variation
+			isDefault
+			relationship: 5d018d3e-b007-4ff3-afd9-a947bcfd9569
+			defaultHierarchy: LocalDateTable_fcaa971a-79b3-4dac-b786-6811de732162.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Bachelor_Degree_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 75b0cd84-0425-4750-8698-4b4f572e65d8
+		summarizeBy: sum
+		sourceColumn: Bachelor_Degree_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bachelor_Degree
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 58a1779e-f3b9-4181-93e2-55f7ccb7d9eb
+		summarizeBy: none
+		sourceColumn: Bachelor_Degree
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bachelor_Degree_Institution_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: f7c9befb-ad5c-468f-a5f9-2c3e79578311
+		summarizeBy: none
+		sourceColumn: Bachelor_Degree_Institution_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bachelor_Degree_Institution
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: d7f6d233-ca08-4447-8a7e-201a55c48929
+		summarizeBy: none
+		sourceColumn: Bachelor_Degree_Institution
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bachelor_Degree_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: f9c36246-602b-4fcf-8e48-598ef2e9aae3
+		summarizeBy: none
+		sourceColumn: Bachelor_Degree_Date
+
+		variation Variation
+			isDefault
+			relationship: 43b61a11-3603-42d0-8ad0-4868e958f67e
+			defaultHierarchy: LocalDateTable_afd79adf-6abb-484e-94bc-e94fde4e17be.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Master_Degree_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ff3aa401-9841-4b3d-b134-95d72cc952fa
+		summarizeBy: sum
+		sourceColumn: Master_Degree_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Master_Degree
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 09d28ed6-ca48-4d76-b7dc-bcdf76b3e235
+		summarizeBy: none
+		sourceColumn: Master_Degree
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Master_Degree_Institution_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 84e6e013-f880-480b-8d91-5a6f236cf87e
+		summarizeBy: none
+		sourceColumn: Master_Degree_Institution_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Master_Degree_Institution
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 69d9e5bd-b121-4b00-a66e-52e83977e4cd
+		summarizeBy: none
+		sourceColumn: Master_Degree_Institution
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Master_Degree_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: f0736b69-a717-4aab-bfe5-dc472234c8d9
+		summarizeBy: none
+		sourceColumn: Master_Degree_Date
+
+		variation Variation
+			isDefault
+			relationship: 591217ca-ede7-4fc1-95aa-8054a38f6e0f
+			defaultHierarchy: LocalDateTable_04de55bb-2a6b-417c-869a-b48e08edfcad.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Doctorate_Degree_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a3facf69-b22b-4988-a626-662010be1abc
+		summarizeBy: sum
+		sourceColumn: Doctorate_Degree_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Doctorate_Degree
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: f681761a-97cf-4860-9971-ea9a4df692d3
+		summarizeBy: none
+		sourceColumn: Doctorate_Degree
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Doctorate_Degree_Institution_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 93f3f148-d25f-405e-8419-99db9224bd23
+		summarizeBy: none
+		sourceColumn: Doctorate_Degree_Institution_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Doctorate_Degree_Institution
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: c9874df9-e483-4446-86bf-114a4e078a52
+		summarizeBy: none
+		sourceColumn: Doctorate_Degree_Institution
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Doctorate_Degree_Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: d4ec5017-72d6-431b-b410-079d8eac29c3
+		summarizeBy: none
+		sourceColumn: Doctorate_Degree_Date
+
+		variation Variation
+			isDefault
+			relationship: 2abb2fa0-f6eb-4b85-8e32-13e7cf6587c8
+			defaultHierarchy: LocalDateTable_95b2db75-90cc-43cc-a3ad-da551edf36a2.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Degree_Sought_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: c82dc1a2-70ca-4248-9bb9-1812a27e1cb9
+		summarizeBy: none
+		sourceColumn: Degree_Sought_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Sought
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: e49c002d-2824-41e0-a6f1-cebcbec588e0
+		summarizeBy: none
+		sourceColumn: Degree_Sought
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduation_Date_Expected
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: ac8e095d-1437-4a6a-a736-192dad5a2c88
+		summarizeBy: none
+		sourceColumn: Graduation_Date_Expected
+
+		variation Variation
+			isDefault
+			relationship: 228417d2-64c8-4733-b61a-817d13d9d01c
+			defaultHierarchy: LocalDateTable_3fba2735-1239-4242-8484-3dcf1bd9da3d.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column GPA_Hours_Attempted
+		dataType: double
+		sourceProviderType: decimal(11, 3)
+		lineageTag: a2e67659-787a-4ada-8294-ddfdd3f839ee
+		summarizeBy: sum
+		sourceColumn: GPA_Hours_Attempted
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GPA_Hours_Earned
+		dataType: double
+		sourceProviderType: decimal(11, 3)
+		lineageTag: e6b6716e-b5c4-40a2-94c3-a20bf900e452
+		summarizeBy: sum
+		sourceColumn: GPA_Hours_Earned
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GPA_Hours
+		dataType: double
+		sourceProviderType: decimal(11, 3)
+		lineageTag: 3b6d3cc2-b1c8-42ce-b0cd-7b2ef0fa8f1f
+		summarizeBy: sum
+		sourceColumn: GPA_Hours
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Quality_Points
+		dataType: double
+		sourceProviderType: decimal(17, 6)
+		lineageTag: 614fd7d9-25a1-4f5f-a51b-e6a8d85b1533
+		summarizeBy: sum
+		sourceColumn: Quality_Points
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GPA_Cumulative
+		dataType: double
+		sourceProviderType: decimal(23, 9)
+		lineageTag: 01a38c81-0d95-49cf-9071-70a37846ec1a
+		summarizeBy: sum
+		sourceColumn: GPA_Cumulative
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Credit_Hours_Registered
+		dataType: double
+		sourceProviderType: decimal(11, 3)
+		lineageTag: a087c735-6b7e-4e83-85f1-1aa2877e4ee1
+		summarizeBy: sum
+		sourceColumn: Credit_Hours_Registered
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column International_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8b1f9a29-a1ae-4d66-a920-f32d41f5c6ba
+		summarizeBy: sum
+		sourceColumn: International_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_Street_Line1
+		dataType: string
+		sourceProviderType: varchar(75)
+		lineageTag: 8c88bdbb-9981-4c92-a2d7-d2fcb519266a
+		summarizeBy: none
+		sourceColumn: Permanent_Street_Line1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_Street_Line2
+		dataType: string
+		sourceProviderType: varchar(75)
+		lineageTag: 9c90f022-1495-4e6e-a8c6-acf820de6ca3
+		summarizeBy: none
+		sourceColumn: Permanent_Street_Line2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_Street_Line3
+		dataType: string
+		sourceProviderType: varchar(75)
+		lineageTag: 8a8da75e-8a57-438c-a5c3-88828a8593d6
+		summarizeBy: none
+		sourceColumn: Permanent_Street_Line3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_City
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: d64dbaaa-d926-4c97-a87e-83136079c88c
+		summarizeBy: none
+		sourceColumn: Permanent_City
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_State_Province
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 7bb0f408-65ba-4a15-bcc1-241c62bb1d2c
+		summarizeBy: none
+		sourceColumn: Permanent_State_Province
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_Postal_Code
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 20cd3d05-14e4-4a14-b909-52302b66d8e0
+		summarizeBy: none
+		sourceColumn: Permanent_Postal_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_Geo_Region
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: e7f2dbe2-db3d-4623-aa4d-3022457c33bf
+		summarizeBy: none
+		sourceColumn: Permanent_Geo_Region
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_US_5_Digit_Zip_Code
+		dataType: string
+		sourceProviderType: varchar(5)
+		lineageTag: 19ba806d-72b7-4a7d-9239-1904f1cfe72b
+		summarizeBy: none
+		sourceColumn: Permanent_US_5_Digit_Zip_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_US_4_Digit_Zip_Code
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: 72d65e0e-2810-4407-beb8-e3be672af7af
+		summarizeBy: none
+		sourceColumn: Permanent_US_4_Digit_Zip_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_Street_Line1
+		dataType: string
+		sourceProviderType: varchar(75)
+		lineageTag: 8390deb4-87f2-49b2-90d7-bc68e14effe9
+		summarizeBy: none
+		sourceColumn: Local_Street_Line1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_Street_Line2
+		dataType: string
+		sourceProviderType: varchar(75)
+		lineageTag: 69e9259b-1f76-4bb9-a374-b865f139ed9a
+		summarizeBy: none
+		sourceColumn: Local_Street_Line2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_Street_Line3
+		dataType: string
+		sourceProviderType: varchar(75)
+		lineageTag: 78ae663a-22d5-432e-b7fd-184805d7fcf2
+		summarizeBy: none
+		sourceColumn: Local_Street_Line3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_City
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: beb7032c-bc97-4060-99f3-75ee164a79f7
+		summarizeBy: none
+		sourceColumn: Local_City
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_State_Province
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 10e052a3-93db-4413-99e1-0f2286cdc8e9
+		summarizeBy: none
+		sourceColumn: Local_State_Province
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_Postal_Code
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: c863c6ed-7d78-467f-8eda-afa30099419a
+		summarizeBy: none
+		sourceColumn: Local_Postal_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity_Timestamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 9655b5e6-1b96-4093-9fbd-17cab90bcb17
+		summarizeBy: none
+		sourceColumn: Activity_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 12429bb3-7e4a-41c8-8c0f-9e9805e82417
+			defaultHierarchy: LocalDateTable_70c0d131-fbc4-4777-af03-964c31da827b.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 2784115f-1942-45a4-a59f-2deccd72ffca
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: c5c113f0-6e68-4dc7-8aa0-7ed1cb22a9c2
+			defaultHierarchy: LocalDateTable_ab53b63e-7191-43b1-84bf-359826f64735.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Preferred_Or_First_Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 266aadc2-1684-4e39-b450-0abf95104be6
+		summarizeBy: none
+		sourceColumn: Preferred_Or_First_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permanent_Country
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: b4de2c5a-b341-4bea-9d4f-196d62b32f1e
+		summarizeBy: none
+		sourceColumn: Permanent_Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Athlete_Ever_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9cf1b98f-bcb0-4b7e-b407-2b0e0770c61e
+		summarizeBy: sum
+		sourceColumn: Athlete_Ever_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Emergency_Contacts
+		dataType: string
+		sourceProviderType: varchar(400)
+		lineageTag: 266b5e66-ac4b-4ef2-84a4-5636d2712c86
+		summarizeBy: none
+		sourceColumn: Emergency_Contacts
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Athlete_Ever
+		dataType: string
+		sourceProviderType: varchar(3)
+		lineageTag: f2fe953d-698f-4905-9308-3a573d9dd7a7
+		summarizeBy: none
+		sourceColumn: Athlete_Ever
+
+		annotation SummarizationSetBy = Automatic
+
+	column Commuter
+		dataType: string
+		sourceProviderType: varchar(3)
+		lineageTag: 37f18f53-09ed-490f-ad93-f2ea54d9d171
+		summarizeBy: none
+		sourceColumn: Commuter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Religion
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: fa2ab9be-1e6f-461f-a5c3-936042415683
+		summarizeBy: none
+		sourceColumn: Religion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone_Home
+		dataType: string
+		lineageTag: 83a5595a-5939-4365-bfbe-9fdd644b1091
+		summarizeBy: none
+		sourceColumn: Phone_Home
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Student_Dim-7d1846b6-506a-497d-bc02-85c44dea86ed' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Student_Dim = Source{[Schema="DWH",Item="Student_Dim"]}[Data]
+				in
+				    DWH_Student_Dim
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

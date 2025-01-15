@@ -1,0 +1,80 @@
+table 'DWH Degree_Graduation_Year_Fact'
+	lineageTag: 14a1eea6-4578-40f7-88bd-6699ee8b90a0
+
+	column Degree_Graduation_Year_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 057f4543-9c31-461e-a875-c3ea477b7114
+		summarizeBy: count
+		sourceColumn: Degree_Graduation_Year_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Fact_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: af9d7175-d0f6-406b-ad49-50bf91145cd8
+		summarizeBy: none
+		sourceColumn: Degree_Fact_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduation_Year_Type
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(15)
+		lineageTag: d153d381-6172-4ecc-9b77-d2e3a77ec799
+		summarizeBy: none
+		sourceColumn: Graduation_Year_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduation_Year
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(4)
+		lineageTag: b494e980-eb19-4e3b-840a-82aa19e0ec61
+		summarizeBy: none
+		sourceColumn: Graduation_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 2b016416-a1e5-4f6a-851c-25c3e047036d
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: ac28a514-7c17-4285-abc6-eef23b813d0e
+			defaultHierarchy: LocalDateTable_95cf3257-15b3-4e51-8e26-914bc3701745.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Degree_Graduation_Year_Fact' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Degree_Graduation_Year_Fact = Source{[Schema="DWH",Item="Degree_Graduation_Year_Fact"]}[Data]
+				in
+				    DWH_Degree_Graduation_Year_Fact
+
+	annotation PBI_ResultType = Table
+

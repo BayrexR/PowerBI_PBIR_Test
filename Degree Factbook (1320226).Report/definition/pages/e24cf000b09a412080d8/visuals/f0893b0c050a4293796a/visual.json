@@ -1,0 +1,272 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.4.0/schema.json",
+  "name": "f0893b0c050a4293796a",
+  "position": {
+    "x": 10.599434391231215,
+    "y": 467.88931812720648,
+    "z": 8000,
+    "height": 186.24720430306277,
+    "width": 1261.3326925565145,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "* ARTIUM BACCALAUREUS HONORIS (Honors Degree Program)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "^^ INSTITUTIONAL (LATIN) HONORS",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The required GPA for the honors distinction is as follows: Cum Laude (with honor): 3.5 - 3.69 || Magna Cum Laude (with great honor): 3.7 - 3.89 || Summa Cum Laude (with highest honor): 3.9 - 4.0",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#323f4f"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "** HONORS IN THE MAJOR FIELD ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8pt",
+                      "color": "#323f4f"
+                    }
+                  },
+                  {
+                    "value": "Honors in the Major Field provides for independent research or special study during the senior year under the supervision of a three-member committee in the student's major.",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#323f4f"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "PHI BETA KAPPA",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8pt"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  },
+                  {
+                    "value": "is an honor typically conferred upon fewer than the top ten percent of graduating majors within the liberal arts, and in exceptional cases, as juniors. Students do not apply for membership. Membership is invitation-only and contingent upon fulfillment of nationally recognized requirements and rigorous criteria set by the Theta Chapter of Rollins. ",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "HONORS IN GRADUATE LEVEL: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8pt",
+                      "color": "#323f4f"
+                    }
+                  },
+                  {
+                    "value": "Students in the following graduate programs with a cumulative grade point average of 3.90 or higher will graduate with honors.",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Master of Arts in Applied Behavior Analysis and Clinical Science",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Master of Arts in Teaching",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Master of Human Resources",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Master of Public Health",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Master of Education",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "There is no honors distinction for the Master of Arts in Clinical Mental Health Counseling or Master of Liberal Studies.",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Students who complete their MBA program with a cumulative grade point average of 3.85 or higher will receive the distinction of graduating with honors. ",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0071BA'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

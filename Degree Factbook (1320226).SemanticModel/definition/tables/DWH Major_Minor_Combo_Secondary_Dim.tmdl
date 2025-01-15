@@ -1,0 +1,164 @@
+table 'DWH Major_Minor_Combo_Secondary_Dim'
+	lineageTag: de8e1b2a-3950-47a4-9158-7739ff59fcb3
+
+	column Major_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3064a70b-8665-49a5-a6a5-d8f02a0672e9
+		summarizeBy: none
+		sourceColumn: Major_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Code
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 2afa669d-4333-4e64-9102-86d1732f14dc
+		summarizeBy: none
+		sourceColumn: Major_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Description
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 2baf673b-a6d4-43b9-b9aa-760d9387a542
+		summarizeBy: none
+		sourceColumn: Major_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: c8ece444-ced9-4c05-88d4-2447f381dad7
+		summarizeBy: none
+		sourceColumn: Major
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_CIP_Code
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(10)
+		lineageTag: 06503e34-652c-404b-887d-d6c71b7520c6
+		summarizeBy: none
+		sourceColumn: Major_CIP_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valid_Major_Yes_No
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(3)
+		lineageTag: 7c41757e-2e6e-44f8-959a-93636754044c
+		summarizeBy: none
+		sourceColumn: Valid_Major_Yes_No
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valid_Minor_Yes_No
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(3)
+		lineageTag: e5771823-4721-41ae-89f2-059fd1a67fe9
+		summarizeBy: none
+		sourceColumn: Valid_Minor_Yes_No
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valid_Concentration_Yes_No
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(3)
+		lineageTag: 9aa97479-b8c4-4c53-8e47-6a8511b588b0
+		summarizeBy: none
+		sourceColumn: Valid_Concentration_Yes_No
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Interest_Slate
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(100)
+		lineageTag: f47e6288-cb38-4bd0-9b28-dd116dabd889
+		summarizeBy: none
+		sourceColumn: Academic_Interest_Slate
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column STEM_Designated_Ind
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 917892ba-20c4-45a6-9699-2a67ed40b988
+		summarizeBy: sum
+		sourceColumn: STEM_Designated_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity_Date
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 61d04136-30a9-43ef-be8a-10d4995f39f1
+		summarizeBy: none
+		sourceColumn: Activity_Date
+
+		variation Variation
+			isDefault
+			relationship: cc860250-c32d-47f2-9bcf-daedf53f1cb1
+			defaultHierarchy: LocalDateTable_f6060d8c-dfb0-4ee4-85ab-5699fcbf0f60.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 9bd5c933-20ad-4396-bf4a-e62f2416de91
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 956c86bb-914f-4f72-be70-baa09f934eef
+			defaultHierarchy: LocalDateTable_c22e67eb-4c7e-4b22-8d19-92badfa3beaa.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Major_Minor_Combo_Secondary_Dim' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Major_Dim = Source{[Schema="DWH",Item="Major_Dim"]}[Data]
+				in
+				    DWH_Major_Dim
+
+	annotation PBI_ResultType = Table
+

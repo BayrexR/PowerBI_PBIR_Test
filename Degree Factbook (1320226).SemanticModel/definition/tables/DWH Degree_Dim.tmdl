@@ -1,0 +1,55 @@
+table 'DWH Degree_Dim'
+	lineageTag: 6a608079-4ee2-4ca6-8100-31ff8d6b7dc3
+
+	column Degree_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a69df966-8337-4a89-b88a-ea3231c90b09
+		summarizeBy: none
+		sourceColumn: Degree_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: a48a698c-445d-49f7-88e2-5296844ed775
+		summarizeBy: none
+		sourceColumn: Degree_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: b2ee1f17-7461-4d49-aab0-134eb2174d15
+		summarizeBy: none
+		sourceColumn: Degree
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Level_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 9cae38c6-f34a-428a-8e21-baa5ca8db501
+		summarizeBy: none
+		sourceColumn: Degree_Level_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Degree_Dim-6144603d-285e-4310-aeb2-47bbbe118b82' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Degree_Dim = Source{[Schema="DWH",Item="Degree_Dim"]}[Data]
+				in
+				    DWH_Degree_Dim
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.2.0/schema.json",
+  "name": "4cfc1be3a3e0a1b90c0e",
+  "displayName": "Demographics(Gender and Age)",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

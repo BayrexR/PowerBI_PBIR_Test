@@ -1,0 +1,102 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DWH Student_Dim","DWH Sex_Dim","DWH Academic_Term_Dim","DWH Student_Level_Dim","DWH Degree_Status_Dim","DWH College_Dim","DWH Major_Dim_Major_1","DWH Degree_Dim","DWH Degree_Level_Dim","DWH Major_Dim_Major_1_2","DWH Major_Dim_Minor_1_2","DWH Major_Dim_Minor_1","DWH Degree_Fact","DWH Major_Dim","DWH Degree_Major_Fact","DWH Major_Type_Dim","DWH Student_Type_Dim","DWH Minor_Dim","DWH Degree_Graduation_Year_Fact","DWH Degree_Major_Minor_Combo_Fact","DWH Major_Minor_Combo_Primary_Dim","DWH Major_Minor_Combo_Secondary_Dim","Metadata Glossary"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.138.1452.0 (24.11)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'DWH Student_Dim'
+ref table 'DWH Sex_Dim'
+ref table 'DWH Academic_Term_Dim'
+ref table 'DWH Student_Level_Dim'
+ref table 'DWH Degree_Status_Dim'
+ref table 'DWH College_Dim'
+ref table 'DWH Major_Dim_Major_1'
+ref table 'DWH Degree_Dim'
+ref table 'DWH Degree_Level_Dim'
+ref table 'DWH Major_Dim_Major_1_2'
+ref table 'DWH Major_Dim_Minor_1_2'
+ref table 'DWH Major_Dim_Minor_1'
+ref table 'DWH Degree_Fact'
+ref table 'DWH Major_Dim'
+ref table 'DWH Degree_Major_Fact'
+ref table 'DWH Major_Type_Dim'
+ref table 'DWH Student_Type_Dim'
+ref table 'DWH Minor_Dim'
+ref table 'DWH Degree_Graduation_Year_Fact'
+ref table 'DWH Degree_Major_Minor_Combo_Fact'
+ref table 'DWH Major_Minor_Combo_Primary_Dim'
+ref table 'DWH Major_Minor_Combo_Secondary_Dim'
+ref table 'Metadata Glossary'
+ref table DateTableTemplate_07a753d1-7fec-4cbc-bf9e-5cd91041afab
+ref table LocalDateTable_872569ac-657d-426e-b4f1-de428cdc8404
+ref table LocalDateTable_d374da25-3649-4a5c-abda-60a020518896
+ref table LocalDateTable_18c6c88b-a3cb-4025-98d1-477a0035c0e3
+ref table LocalDateTable_83cc8f35-bc0f-4a53-9a2c-7c4f6c739aa8
+ref table LocalDateTable_0564416c-efce-4192-be8e-797636a87f68
+ref table LocalDateTable_38a121f3-8ec0-4ee9-82b0-5a4669aa1c02
+ref table LocalDateTable_fcaa971a-79b3-4dac-b786-6811de732162
+ref table LocalDateTable_afd79adf-6abb-484e-94bc-e94fde4e17be
+ref table LocalDateTable_04de55bb-2a6b-417c-869a-b48e08edfcad
+ref table LocalDateTable_95b2db75-90cc-43cc-a3ad-da551edf36a2
+ref table LocalDateTable_3fba2735-1239-4242-8484-3dcf1bd9da3d
+ref table LocalDateTable_70c0d131-fbc4-4777-af03-964c31da827b
+ref table LocalDateTable_ab53b63e-7191-43b1-84bf-359826f64735
+ref table LocalDateTable_360b6d01-5d60-40fc-b4c2-d979d4b483c3
+ref table LocalDateTable_3459d178-5077-48c0-8011-96d1b955c178
+ref table LocalDateTable_5bfbab18-fe50-4839-b7ee-2d1b70fa8600
+ref table LocalDateTable_68a258f2-ed46-42b2-a80b-fce7bbeb7efc
+ref table LocalDateTable_6926b201-5f33-43a2-a3f7-952e41f64513
+ref table LocalDateTable_2dcbc95c-ceef-47b3-a1ae-d92047351c20
+ref table LocalDateTable_a6c9aed1-694c-4fdb-93f2-e4c0ed0c25ba
+ref table LocalDateTable_60584bcf-ce59-41f8-baf9-82c68c953b16
+ref table LocalDateTable_b7bb6126-3c48-41fc-a712-aa04f1edc615
+ref table LocalDateTable_56ff9ccf-5187-4630-b0dc-8aa32fe1aa16
+ref table LocalDateTable_4f6971f1-0ff2-42b6-8cac-79577e24bece
+ref table LocalDateTable_4b0e1060-15cd-4849-bc02-bef84cedf767
+ref table LocalDateTable_bbe55be9-6180-440f-8984-307b8fc38bf6
+ref table LocalDateTable_9ae90281-4c46-45be-b1a4-a61d8028b5b7
+ref table LocalDateTable_2d3b7f9e-f96f-497a-b592-494f60949ffe
+ref table LocalDateTable_bb37479f-8257-4da9-b0c6-baab5608a74f
+ref table LocalDateTable_9173ea2f-1128-457f-87de-b298903e0459
+ref table LocalDateTable_d4d92899-702f-41bc-9435-41a928127c58
+ref table LocalDateTable_b28cf827-f8ef-4829-819b-baf02558ae7d
+ref table LocalDateTable_0ed03d9b-2e11-4b1b-b305-2c7a7e23044f
+ref table LocalDateTable_22e8bd8b-7006-4f5d-b77d-ba16fbe6faff
+ref table LocalDateTable_312d200e-5363-4eea-8e58-125efc65da51
+ref table LocalDateTable_5938a34d-05fe-44e9-93eb-f4ec7be42660
+ref table LocalDateTable_ea7aea6b-bdad-4980-8ed3-995bf0da829c
+ref table LocalDateTable_f374ffcd-276c-44da-9906-f6d796df34e2
+ref table LocalDateTable_2644ad2e-fdbc-48b5-b2f5-e9e2954540cd
+ref table LocalDateTable_a210ffa2-b81f-4a9f-83a1-fd09c54d3de9
+ref table LocalDateTable_0ce0815c-4f68-4381-b769-b82cfad0bd62
+ref table LocalDateTable_7c767321-d67c-40a5-a4c9-f5cc1a636c0a
+ref table LocalDateTable_9d776ed9-a606-4f37-b795-7e92db2c6aac
+ref table LocalDateTable_56b2adc7-8088-41f8-82ae-54e3e768f72d
+ref table LocalDateTable_8f970035-1f4f-4af5-98c1-dd0cb8c33d17
+ref table LocalDateTable_c876d008-2333-4656-86c0-af6ca83e7926
+ref table LocalDateTable_06945fc2-2278-4f36-bde5-4c1f7d5d10ae
+ref table LocalDateTable_c6737781-39da-4b5f-b797-3fc30493d020
+ref table LocalDateTable_95cf3257-15b3-4e51-8e26-914bc3701745
+ref table LocalDateTable_455747b9-97c1-44ba-b921-7f924f52ba34
+ref table LocalDateTable_0c5dd08e-526b-4358-ab04-e47cae6ee7c1
+ref table LocalDateTable_bcf03da2-9333-4bc0-91e4-b3c33e310434
+ref table LocalDateTable_f6060d8c-dfb0-4ee4-85ab-5699fcbf0f60
+ref table LocalDateTable_c22e67eb-4c7e-4b22-8d19-92badfa3beaa
+ref table LocalDateTable_438904a2-47f9-4805-bdd7-7537afd99403
+ref table LocalDateTable_7aea766c-8c7e-4de2-a070-4fbe4053133f
+ref table LocalDateTable_cee7ae6a-1d63-4be9-8f2e-412ddb11093f
+ref table LocalDateTable_aee5bd4b-44a4-4baf-bd71-6903857eff8a
+ref table LocalDateTable_eb7cdb82-dfb2-4432-bc23-ab59f4891a70
+
+ref cultureInfo en-US
+

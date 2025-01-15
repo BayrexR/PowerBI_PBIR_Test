@@ -1,0 +1,82 @@
+table 'DWH Degree_Status_Dim'
+	lineageTag: 8cccf200-0c49-4817-8a1c-7ca68e18d95f
+
+	column Degree_Status_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c1b4e168-a925-464c-abad-7067035ec149
+		summarizeBy: none
+		sourceColumn: Degree_Status_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Status_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 49f5fc8e-774b-4a78-bece-46cfe82fff4d
+		summarizeBy: none
+		sourceColumn: Degree_Status_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Status
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: bb8b460d-7285-4b34-ab84-04bdd993afe4
+		summarizeBy: none
+		sourceColumn: Degree_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Award_Status_Indicator
+		dataType: string
+		sourceProviderType: varchar(1)
+		lineageTag: 8df90c53-2c7b-4059-92c1-a517e9e42816
+		summarizeBy: none
+		sourceColumn: Award_Status_Indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column Next_Degree_Status_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 336384ca-0c51-4beb-8f21-c4cc898e3785
+		summarizeBy: none
+		sourceColumn: Next_Degree_Status_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bb98be17-aea6-40c9-b65c-1ae0a1461941
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: e0051752-469f-4744-8848-76cb714ffcab
+			defaultHierarchy: LocalDateTable_d4d92899-702f-41bc-9435-41a928127c58.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Degree_Status_Dim-49faad3f-b2e8-42a1-b619-01cdd85c31d0' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Degree_Status_Dim = Source{[Schema="DWH",Item="Degree_Status_Dim"]}[Data]
+				in
+				    DWH_Degree_Status_Dim
+
+	annotation PBI_ResultType = Table
+

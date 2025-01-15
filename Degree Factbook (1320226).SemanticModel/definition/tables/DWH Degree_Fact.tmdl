@@ -1,0 +1,1178 @@
+table 'DWH Degree_Fact'
+	lineageTag: bb7eea93-939a-44c7-a8b2-f55f9257256c
+
+	column Degree_Fact_Key
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d102a14c-d464-422c-a578-467eb941f220
+		summarizeBy: none
+		sourceColumn: Degree_Fact_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Surrogate_Id
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 17d3527f-26cb-4462-8d64-6f4e4f52ad36
+		summarizeBy: count
+		sourceColumn: Degree_Surrogate_Id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d8c55c7c-a4c9-4802-b992-f7622901a54b
+		summarizeBy: none
+		sourceColumn: Student_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Level_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d809b2b8-5dbf-4451-9268-0d1a119b8981
+		summarizeBy: none
+		sourceColumn: Student_Level_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column College_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6a357230-4bd2-416f-b974-086f41aad5a1
+		summarizeBy: none
+		sourceColumn: College_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column College_Dual_Degree_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dc6fcad7-a89c-4760-9e2c-7a3cb85f96dc
+		summarizeBy: count
+		sourceColumn: College_Dual_Degree_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ab17ff08-4bc7-4b9b-9355-36b35bc58d9e
+		summarizeBy: none
+		sourceColumn: Degree_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Level_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 328f6e02-4051-4872-8d19-34e60c19b84e
+		summarizeBy: none
+		sourceColumn: Degree_Level_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Status_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8139aad9-238e-4c23-8587-aca5b2a6e9f5
+		summarizeBy: none
+		sourceColumn: Degree_Status_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admit_Term_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f5a42066-2257-4c26-8ece-54000a782b2e
+		summarizeBy: count
+		sourceColumn: Admit_Term_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sex_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 54b5b3b9-3d1f-4255-a32a-17d18912025a
+		summarizeBy: none
+		sourceColumn: Sex_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ethnicity_Race
+		dataType: string
+		sourceProviderType: varchar(60)
+		lineageTag: 1021b42f-fc9b-48a1-a613-77144c609b06
+		summarizeBy: none
+		sourceColumn: Ethnicity_Race
+
+		annotation SummarizationSetBy = Automatic
+
+	column Am_Indian_or_Alaska_Native_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3a25b489-502a-4b95-a7f9-38791d166410
+		summarizeBy: sum
+		sourceColumn: Am_Indian_or_Alaska_Native_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asian_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 311943b8-1b15-42ce-92a6-53296ea65da4
+		summarizeBy: sum
+		sourceColumn: Asian_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Black_or_African_American_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9adf3b84-d41a-4562-a09a-50fa0104d390
+		summarizeBy: sum
+		sourceColumn: Black_or_African_American_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pacific_Islands_American_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6c5ffac8-a5fb-450c-8f12-f9b414a50b4f
+		summarizeBy: sum
+		sourceColumn: Pacific_Islands_American_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column US_Non_Resident_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 22f6940d-2a4f-4a27-8e73-5fa1c6fd4376
+		summarizeBy: sum
+		sourceColumn: US_Non_Resident_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column White_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b6402b5d-1c2c-449c-a3fd-cd9a93580504
+		summarizeBy: sum
+		sourceColumn: White_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Two_Or_More_Races_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 648e2e5b-168d-43de-8b1f-4eb7a917a782
+		summarizeBy: sum
+		sourceColumn: Two_Or_More_Races_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unknown_Race_Ethnicity_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d9d61b57-a9f9-4430-8cdb-137254b9a1b4
+		summarizeBy: sum
+		sourceColumn: Unknown_Race_Ethnicity_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hispanic_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 73fa054b-06c9-4aac-9c52-3540c3b7b66c
+		summarizeBy: sum
+		sourceColumn: Hispanic_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Awarded_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 313dad36-fcf4-4188-80d9-fafa1576b953
+		summarizeBy: sum
+		sourceColumn: Degree_Awarded_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age_At_Graduation
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5ec63bf0-587a-4106-831a-c5f5d6a8a3f2
+		summarizeBy: sum
+		sourceColumn: Age_At_Graduation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age_Under_18_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7aee4694-7ac8-447a-a7ee-c8683bbf4390
+		summarizeBy: sum
+		sourceColumn: Age_Under_18_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age_18_To_24_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 20437c4b-44f3-4a98-9e94-1544bd55299c
+		summarizeBy: sum
+		sourceColumn: Age_18_To_24_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age_25_To_39_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0f355691-49aa-4d27-8f21-6a3887ac287e
+		summarizeBy: sum
+		sourceColumn: Age_25_To_39_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age_40_And_Above_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7290caaa-c189-4644-8f2a-f169a4b7e807
+		summarizeBy: sum
+		sourceColumn: Age_40_And_Above_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age_Unknown_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2d06d34b-0734-43cb-a91e-3f2b4fd042e6
+		summarizeBy: sum
+		sourceColumn: Age_Unknown_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cohort_Code
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(10)
+		lineageTag: c1e80437-581a-46dd-ac05-b4e1aad62432
+		summarizeBy: none
+		sourceColumn: Cohort_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cohort
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: a035a748-6ef9-42ae-a630-dfecb771cb50
+		summarizeBy: none
+		sourceColumn: Cohort
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f7a775fd-2fbc-4f50-aea8-74a5f849f2c6
+		summarizeBy: none
+		sourceColumn: Major_1_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_1_2_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 29d70ef4-04fa-4004-9789-ff851761b69f
+		summarizeBy: none
+		sourceColumn: Major_1_2_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_1_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3947586e-94ff-4b2d-a1b7-cba792edb9d9
+		summarizeBy: none
+		sourceColumn: Major_Minor_1_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_1_2_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 94c5e768-8515-4f26-baad-f002c6a886a7
+		summarizeBy: none
+		sourceColumn: Major_Minor_1_2_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Dual_Department_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7f82aaf4-fb42-472d-9c22-2a1099e42d2d
+		summarizeBy: count
+		sourceColumn: Degree_Dual_Department_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Campus_Code
+		dataType: string
+		sourceProviderType: varchar(3)
+		lineageTag: 720cf1aa-ec42-40b1-993a-19af8c800827
+		summarizeBy: none
+		sourceColumn: Campus_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Dual_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 533bc81d-328f-44d9-a7f8-cb03b395745d
+		summarizeBy: count
+		sourceColumn: Major_Dual_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 99f306ff-2813-4df3-955b-750e753c013b
+		summarizeBy: count
+		sourceColumn: Department_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department_2_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f118831d-47d3-491e-bcec-3dbd89e8b94c
+		summarizeBy: count
+		sourceColumn: Department_2_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Program
+		dataType: string
+		sourceProviderType: varchar(15)
+		lineageTag: d8cc0983-f9a8-41cf-829a-4e8a718121d7
+		summarizeBy: none
+		sourceColumn: Program
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department_1_2_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: baf08dbc-635d-4949-8edb-b6f4438dd79c
+		summarizeBy: count
+		sourceColumn: Department_1_2_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department_2_2_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5b388b6f-b41a-4a09-9d94-6123c807862b
+		summarizeBy: count
+		sourceColumn: Department_2_2_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Campus_2_Code
+		dataType: string
+		sourceProviderType: varchar(3)
+		lineageTag: b3ad68db-133c-4444-bcd3-c9a0014e149f
+		summarizeBy: none
+		sourceColumn: Campus_2_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Record_Term_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 75d73218-1458-412b-9ea7-8cfff33ab80a
+		summarizeBy: none
+		sourceColumn: Student_Record_Term_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Readmit_Term_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 85d13451-3f1e-4421-bdcd-131522ee2ced
+		summarizeBy: none
+		sourceColumn: Readmit_Term_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduation_Term_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e12525cf-7beb-4702-91eb-1edfc3ba6038
+		summarizeBy: none
+		sourceColumn: Graduation_Term_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Application_Date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 71d1bc7f-c35b-4913-a091-c45a486be2e9
+		summarizeBy: none
+		sourceColumn: Degree_Application_Date
+
+		variation Variation
+			isDefault
+			relationship: 34e3769f-ea13-4e69-a159-0a9f5008ab87
+			defaultHierarchy: LocalDateTable_a210ffa2-b81f-4a9f-83a1-fd09c54d3de9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduation_Date
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: ed74c77f-1860-4fd8-a241-dae0e3b3eb96
+		summarizeBy: none
+		sourceColumn: Graduation_Date
+
+		variation Variation
+			isDefault
+			relationship: b7c81834-63a7-43c0-bd62-37e08c4b899c
+			defaultHierarchy: LocalDateTable_0ce0815c-4f68-4381-b769-b82cfad0bd62.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Graduation_Year_Rollins
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: c70d62f9-ed87-4b80-bcbc-51bd70b575b8
+		summarizeBy: none
+		sourceColumn: Graduation_Year_Rollins
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduation_Year_IPEDS
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: a6e988f9-ddce-45d3-a256-ae59b0554b63
+		summarizeBy: none
+		sourceColumn: Graduation_Year_IPEDS
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity_Date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 5514635e-5778-4ffc-9c97-8e2cd89ab177
+		summarizeBy: none
+		sourceColumn: Activity_Date
+
+		variation Variation
+			isDefault
+			relationship: 9f90204a-acae-44c5-a2fb-f973346aa0db
+			defaultHierarchy: LocalDateTable_7c767321-d67c-40a5-a4c9-f5cc1a636c0a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Honors_Bachelor_of_Arts_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4cc1fb53-2340-4bb6-98a7-d7bc57eb54ab
+		summarizeBy: sum
+		sourceColumn: Honors_Bachelor_of_Arts_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Honors_Cum_Laude_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ba321a01-c7f8-45f4-b17e-bf0ab2e0f538
+		summarizeBy: sum
+		sourceColumn: Honors_Cum_Laude_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Honors_Magna_Cum_Laude_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9e92cd23-4e8f-4a0f-9558-2d6203a46d71
+		summarizeBy: sum
+		sourceColumn: Honors_Magna_Cum_Laude_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Honors_Summa_Laude_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 85c91197-446e-4751-aea4-b5baf4f48184
+		summarizeBy: sum
+		sourceColumn: Honors_Summa_Laude_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Honors_With_High_Honors_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f5f9aea0-f6e5-4ed2-b3d9-8bfe2a13e9e9
+		summarizeBy: sum
+		sourceColumn: Honors_With_High_Honors_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column AMP_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3ab3299a-ab40-4f37-81a6-00c615416d17
+		summarizeBy: sum
+		sourceColumn: AMP_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column GPA_Final
+		dataType: double
+		sourceProviderType: decimal(11, 9)
+		lineageTag: 7842e2f8-0e44-4153-8c14-48a8aa188b57
+		summarizeBy: sum
+		sourceColumn: GPA_Final
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GPA_Final_Rank
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 52741e69-99c1-4bb6-8cf9-e9511220caad
+		summarizeBy: sum
+		sourceColumn: GPA_Final_Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column GPA_Major_1
+		dataType: double
+		sourceProviderType: real
+		lineageTag: dd03086c-eaf2-4598-9940-58b4b6b92550
+		summarizeBy: sum
+		sourceColumn: GPA_Major_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GPA_Major_1_2
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 0543e791-dfc0-4fbf-a3a6-a0f38c6f8fd5
+		summarizeBy: sum
+		sourceColumn: GPA_Major_1_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GPA_Major_Minor_1
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 66bc3f6a-ce3b-407f-8625-72d74451d8f0
+		summarizeBy: sum
+		sourceColumn: GPA_Major_Minor_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GPA_Major_Minor_1_2
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 2c443156-b346-4312-a587-c51a4f94e07f
+		summarizeBy: sum
+		sourceColumn: GPA_Major_Minor_1_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Average_Credit_Hour_Per_Term
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: 94854b75-fc6c-4a2a-bcfc-07c657fc48ae
+		summarizeBy: sum
+		sourceColumn: Average_Credit_Hour_Per_Term
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Terms_To_Graduate
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 99326679-7661-42a2-ba2e-3fb4c061da22
+		summarizeBy: sum
+		sourceColumn: Terms_To_Graduate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Terms_Attended_To_Graduate
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8b7a9b31-4bc8-4ca3-bb5d-084f7e2b91b3
+		summarizeBy: sum
+		sourceColumn: Terms_Attended_To_Graduate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Springs_Attended_To_Graduate
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 136f3299-e631-4bc0-876c-247408f681b3
+		summarizeBy: sum
+		sourceColumn: Springs_Attended_To_Graduate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Summers_Attended_To_Graduate
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bd53fc9e-621e-426c-8d1a-e7cd0e6c4154
+		summarizeBy: sum
+		sourceColumn: Summers_Attended_To_Graduate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Falls_Attended_To_Graduate
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 772c4aef-cf92-45c9-91b5-a401e3993c6b
+		summarizeBy: sum
+		sourceColumn: Falls_Attended_To_Graduate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gap_Registered_Terms_Last_Admit
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4d5877ed-2be4-4bc6-a70c-7473e248596c
+		summarizeBy: sum
+		sourceColumn: Gap_Registered_Terms_Last_Admit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gap_Enrolled_Terms_Last_Admit
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: be23a711-e2d8-4d74-b06e-8c31d611d005
+		summarizeBy: sum
+		sourceColumn: Gap_Enrolled_Terms_Last_Admit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Years_To_Graduate_By_Term
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e252069e-93ae-4b2b-b79c-8ba988e7f5f5
+		summarizeBy: sum
+		sourceColumn: Years_To_Graduate_By_Term
+
+		annotation SummarizationSetBy = Automatic
+
+	column Years_To_Graduate_By_Cohort
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b7a78f90-e80a-4a97-8f95-976626ed8c54
+		summarizeBy: sum
+		sourceColumn: Years_To_Graduate_By_Cohort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Years_To_Graduate_By_Date
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6a3f6c62-de16-46d7-97b8-06844334bc85
+		summarizeBy: sum
+		sourceColumn: Years_To_Graduate_By_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Months_To_Graduate
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d705aed8-fcca-4462-a62d-4bb29fd3c61e
+		summarizeBy: sum
+		sourceColumn: Months_To_Graduate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Years_To_Graduate_Readmit
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6b9c1407-0c86-49be-9d2f-441c0da436e6
+		summarizeBy: sum
+		sourceColumn: Years_To_Graduate_Readmit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Years_To_Graduate_Absolute
+		dataType: double
+		sourceProviderType: decimal(3, 1)
+		lineageTag: 8810ed39-6714-4a95-821b-774252e643ad
+		summarizeBy: sum
+		sourceColumn: Years_To_Graduate_Absolute
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Graduated_Lt4_Years_By_Term_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 48091b8b-c373-4628-8e47-3eac8cd64de8
+		summarizeBy: sum
+		sourceColumn: Graduated_Lt4_Years_By_Term_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_4_Years_By_Term_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 628fc17f-1a15-46e1-a381-1cba15dbc15a
+		summarizeBy: sum
+		sourceColumn: Graduated_4_Years_By_Term_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_5_Years_By_Term_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c0e14647-0f89-4e2f-9708-feec60d750ed
+		summarizeBy: sum
+		sourceColumn: Graduated_5_Years_By_Term_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_6_Years_By_Term_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 95c87194-ec69-46f4-bb58-f817b772be45
+		summarizeBy: sum
+		sourceColumn: Graduated_6_Years_By_Term_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_7_Years_By_Term_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3ea29fc8-6082-4521-85a5-e787736835af
+		summarizeBy: sum
+		sourceColumn: Graduated_7_Years_By_Term_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_8_Years_By_Term_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6e8814a0-40d5-4621-a7bc-8de488aad657
+		summarizeBy: sum
+		sourceColumn: Graduated_8_Years_By_Term_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_Lt4_Years_By_Cohort_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b9c3e27a-6d2e-4848-90f4-7814fa16092b
+		summarizeBy: sum
+		sourceColumn: Graduated_Lt4_Years_By_Cohort_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_4_Years_By_Cohort_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a9155588-e225-46e6-8301-94d9b06e3512
+		summarizeBy: sum
+		sourceColumn: Graduated_4_Years_By_Cohort_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_5_Years_By_Cohort_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6369d8c6-691d-4a0e-b45d-f4d779deecfd
+		summarizeBy: sum
+		sourceColumn: Graduated_5_Years_By_Cohort_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_6_Years_By_Cohort_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6880adb4-6087-4b57-9629-f9631002fc6e
+		summarizeBy: sum
+		sourceColumn: Graduated_6_Years_By_Cohort_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_7_Years_By_Cohort_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1387cd0e-85c3-488b-8732-702079c1832e
+		summarizeBy: sum
+		sourceColumn: Graduated_7_Years_By_Cohort_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_8_Years_By_Cohort_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 43db4cb1-d633-41f2-9c06-0528c6bab074
+		summarizeBy: sum
+		sourceColumn: Graduated_8_Years_By_Cohort_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_Lt4_Years_By_Date_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 12bdf668-cfa1-4fc8-9f0d-ab134eff7314
+		summarizeBy: sum
+		sourceColumn: Graduated_Lt4_Years_By_Date_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_4_Years_By_Date_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 27e9d1ec-077d-469c-b094-094d39b124fd
+		summarizeBy: sum
+		sourceColumn: Graduated_4_Years_By_Date_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_5_Years_By_Date_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fc899de2-2fb8-43c4-b2b7-fb9f027dd277
+		summarizeBy: sum
+		sourceColumn: Graduated_5_Years_By_Date_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_6_Years_By_Date_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2cc7ebf9-c8a0-4564-936e-4b896eeb42e9
+		summarizeBy: sum
+		sourceColumn: Graduated_6_Years_By_Date_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_7_Years_By_Date_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 493d21e4-f139-4f47-8ace-a9072c3e2a2f
+		summarizeBy: sum
+		sourceColumn: Graduated_7_Years_By_Date_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduated_8_Years_By_Date_Ind
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 83d8bb4d-8828-467d-b0db-1537014ddf2c
+		summarizeBy: sum
+		sourceColumn: Graduated_8_Years_By_Date_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: ba158949-53a6-4b0f-9805-750ac73dd680
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 50a4b02c-6071-4817-ae7b-3b64a2f2d8d8
+			defaultHierarchy: LocalDateTable_9d776ed9-a606-4f37-b795-7e92db2c6aac.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Honors_Phi_Beta_Kappa_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0da6c412-c6a9-42f0-b522-bd2fb70ec8dc
+		summarizeBy: sum
+		sourceColumn: Honors_Phi_Beta_Kappa_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Honors_In_Graduate_Level_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 10d17360-4c25-47ea-8f08-f0dc29b32dc0
+		summarizeBy: sum
+		sourceColumn: Honors_In_Graduate_Level_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Honors_In_Major_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 440a6dfb-9eea-410b-93a7-ecd47d8a8019
+		summarizeBy: sum
+		sourceColumn: Honors_In_Major_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Admit_Term_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a4bae9aa-084e-42a0-b569-40a4068db639
+		summarizeBy: count
+		sourceColumn: Student_Admit_Term_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Key_Last_Enrollment
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ae4dfba0-9b6f-4343-a36f-c2b91c14a518
+		summarizeBy: sum
+		sourceColumn: Term_Key_Last_Enrollment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Term_Key_Last_Enrollment
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7f1602f7-ff37-4e08-8e97-275a0f2a2532
+		summarizeBy: sum
+		sourceColumn: Student_Term_Key_Last_Enrollment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Student_Level_Key
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: ff2e171a-5841-46e0-935d-3e4337c3dba0
+		summarizeBy: none
+		sourceColumn: Student_Student_Level_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Type_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f30945df-d4e9-42f8-a00e-acdc3142996b
+		summarizeBy: none
+		sourceColumn: Student_Type_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Double_Major_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d966ca68-96fa-4fb8-84b2-ce6e137b104d
+		summarizeBy: sum
+		sourceColumn: Double_Major_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Has_Minor_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7aeb6923-67f8-4e59-8cc5-dc7809f9629d
+		summarizeBy: sum
+		sourceColumn: Has_Minor_Ind
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Consolidates the values of AGE_ Indicators into a single grouping field.
+	column Age_Group =
+			SWITCH(
+			    TRUE(),
+			    'DWH Degree_Fact'[Age_18_To_24_Ind] = 1, "Age 18-24",
+			    'DWH Degree_Fact'[Age_25_To_39_Ind] = 1,  "Age 25-39",
+			    'DWH Degree_Fact'[Age_40_And_Above_Ind] =1, "Age 40+",
+			    'DWH Degree_Fact'[Age_Under_18_Ind] =1, "Age <18",
+			    'DWH Degree_Fact'[Age_Unknown_Ind] =1, "Age Unknown",
+			    "Age Unknown"
+			)
+		lineageTag: 6831cbb2-a7fc-489b-ad2b-0c42c54bda7f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduation_Date_Student_Key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 81324d40-e828-49e1-b94e-8582569b3918
+		summarizeBy: count
+		sourceColumn: Graduation_Date_Student_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Program_Description
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: fe643c51-334a-4d58-8f26-6abc94dc2398
+		summarizeBy: none
+		sourceColumn: Program_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Degree_Fact-5585639c-33dd-490b-a8ad-996e11f170ed' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Degree_Fact = Source{[Schema="DWH",Item="Degree_Fact"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(DWH_Degree_Fact,{{"Graduation_Date", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

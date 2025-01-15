@@ -1,0 +1,46 @@
+table 'DWH Student_Level_Dim'
+	lineageTag: 7c864eac-067f-4bf6-8428-101e00c779b1
+
+	column Student_Level_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 18fe6368-4b35-4bb9-8a3a-68f169ae81e5
+		summarizeBy: none
+		sourceColumn: Student_Level_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Level_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 1f402926-ee8f-44be-9b55-ff03e202705b
+		summarizeBy: none
+		sourceColumn: Student_Level_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Student_Level
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: f44d92bb-068f-46e1-aa1f-7f43e8394e98
+		summarizeBy: none
+		sourceColumn: Student_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Student_Level_Dim-749cc1a6-fce2-471b-892b-5e0f4e46fe47' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Student_Level_Dim = Source{[Schema="DWH",Item="Student_Level_Dim"]}[Data]
+				in
+				    DWH_Student_Level_Dim
+
+	annotation PBI_ResultType = Table
+

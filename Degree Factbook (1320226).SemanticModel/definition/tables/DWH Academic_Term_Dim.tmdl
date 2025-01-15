@@ -1,0 +1,1026 @@
+table 'DWH Academic_Term_Dim'
+	lineageTag: d4e6c2eb-39cc-457a-a35d-c2b2d28ef3eb
+
+	column Academic_Term_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0742e5c8-53bd-45a7-9f46-71745bf89419
+		summarizeBy: count
+		sourceColumn: Academic_Term_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a7b29b0d-2e23-4e3e-a822-22c62b703d0a
+		summarizeBy: none
+		sourceColumn: Term_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Banner_Term_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dafba408-e4a0-4546-94d3-f3911422236b
+		summarizeBy: count
+		sourceColumn: Banner_Term_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Code
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 75933809-eb57-4261-8e4c-f98e8fd0b258
+		summarizeBy: none
+		sourceColumn: Term_Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Number
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9e97ad10-ef6e-4716-9cee-cec9564959a0
+		summarizeBy: sum
+		sourceColumn: Term_Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 273d55ad-d81a-4623-b666-992dc0ee8a80
+		summarizeBy: none
+		sourceColumn: Term_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Year
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: c2941846-98d8-47f2-aae3-eb41f00e4691
+		summarizeBy: none
+		sourceColumn: Term_Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: da041303-f217-45dc-b290-81aa71630008
+		summarizeBy: none
+		sourceColumn: Term
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Description
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(50)
+		lineageTag: c5a0a589-f79d-47a1-aec5-37f9fbbd0964
+		summarizeBy: none
+		sourceColumn: Term_Description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fall_Term_Indicator
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1ff7528b-23d8-4c8a-8d3e-15786f993143
+		summarizeBy: sum
+		sourceColumn: Fall_Term_Indicator
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLA_Indicator
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f9d78436-b8f6-4d93-9b63-227e3f3c076b
+		summarizeBy: sum
+		sourceColumn: CLA_Indicator
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Holt_Indicator
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 63376761-60ad-448f-8232-5e4c73f4499e
+		summarizeBy: sum
+		sourceColumn: Holt_Indicator
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Crummer_Indicator
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9ac4c39c-13dc-4c17-8e0d-eb558480a3c0
+		summarizeBy: sum
+		sourceColumn: Crummer_Indicator
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weeks_After_Thanksgiving
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4bce609e-1dc1-40f5-bad4-acb5b6778b9f
+		summarizeBy: sum
+		sourceColumn: Weeks_After_Thanksgiving
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Start_Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: b5050e37-0e50-410e-998a-1c491768880c
+		summarizeBy: none
+		sourceColumn: Term_Start_Date
+
+		variation Variation
+			isDefault
+			relationship: 696619e8-fcb0-4233-b5cd-7434a41657d3
+			defaultHierarchy: LocalDateTable_360b6d01-5d60-40fc-b4c2-d979d4b483c3.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Term_End_Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 3bb6dce2-1bdb-4589-8a1a-8e17adddaaf6
+		summarizeBy: none
+		sourceColumn: Term_End_Date
+
+		variation Variation
+			isDefault
+			relationship: 4ddd8ec8-32bb-41ca-bf67-e9a847ed1d1c
+			defaultHierarchy: LocalDateTable_3459d178-5077-48c0-8011-96d1b955c178.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Start_Before_MLK_Day
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 77db3e16-244f-4fd6-82c4-200c2d101c8d
+		summarizeBy: sum
+		sourceColumn: Start_Before_MLK_Day
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Year_Short
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 8d7acc3e-6845-4c0e-ad20-0d164285e37a
+		summarizeBy: none
+		sourceColumn: Academic_Year_Short
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Aid_Processing_Years
+		dataType: string
+		isHidden
+		sourceProviderType: char
+		lineageTag: 169d994e-0f9d-470b-b94e-6fc71ad1d35d
+		summarizeBy: none
+		sourceColumn: Financial_Aid_Processing_Years
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Aid_Award_Term
+		dataType: string
+		isHidden
+		sourceProviderType: char
+		lineageTag: 1d0f86c1-d0f1-4b05-835a-1090156157da
+		summarizeBy: none
+		sourceColumn: Financial_Aid_Award_Term
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Aid_Award_Beginning_Period
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 78079712-6f90-48ae-a6b9-226085beab16
+		summarizeBy: sum
+		sourceColumn: Financial_Aid_Award_Beginning_Period
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Aid_Award_Ending_Period
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e3c0e8dd-56c6-49fe-8017-b2c5f8b86c93
+		summarizeBy: sum
+		sourceColumn: Financial_Aid_Award_Ending_Period
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Aid_Summer_Term_Indicator
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fcf4b553-7f2b-449b-84bc-037870b7d3ba
+		summarizeBy: sum
+		sourceColumn: Financial_Aid_Summer_Term_Indicator
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Housing_Start_Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 1711d296-20f2-44dc-a873-97d8925e024d
+		summarizeBy: none
+		sourceColumn: Housing_Start_Date
+
+		variation Variation
+			isDefault
+			relationship: 778aa08e-38a0-4d2c-9c0c-7837d85dd270
+			defaultHierarchy: LocalDateTable_5bfbab18-fe50-4839-b7ee-2d1b70fa8600.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Housing_End_Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: cc1afda4-0d76-4ffe-87b5-bac79c14831d
+		summarizeBy: none
+		sourceColumn: Housing_End_Date
+
+		variation Variation
+			isDefault
+			relationship: a6d18881-ff81-40db-9ff6-34182f84a286
+			defaultHierarchy: LocalDateTable_68a258f2-ed46-42b2-a80b-fce7bbeb7efc.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Calendar_Year
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: 4669c37f-6b82-4600-8341-22c09d039b89
+		summarizeBy: none
+		sourceColumn: Calendar_Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column New_International_Students_Report
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: dadb428a-559c-44ab-a140-05f3782fc2db
+		summarizeBy: none
+		sourceColumn: New_International_Students_Report
+
+		variation Variation
+			isDefault
+			relationship: ce542f20-a27f-41a0-abd0-e3aeb506e576
+			defaultHierarchy: LocalDateTable_6926b201-5f33-43a2-a3f7-952e41f64513.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column New_Students_Report
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 7f8455df-5007-452d-b37a-3358a0abcbfc
+		summarizeBy: none
+		sourceColumn: New_Students_Report
+
+		variation Variation
+			isDefault
+			relationship: ad709708-564b-4a8f-8162-5f5cfc0c7499
+			defaultHierarchy: LocalDateTable_2dcbc95c-ceef-47b3-a1ae-d92047351c20.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Returning_Students_Report
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 92220830-5773-4289-99ae-acb9918aa135
+		summarizeBy: none
+		sourceColumn: Returning_Students_Report
+
+		variation Variation
+			isDefault
+			relationship: b9287552-3ac5-41f3-a344-4ed9839b90c9
+			defaultHierarchy: LocalDateTable_a6c9aed1-694c-4fdb-93f2-e4c0ed0c25ba.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column First_Day_of_Class
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 66bad68a-8fcd-4db2-bb5e-0ef712e5e3fe
+		summarizeBy: none
+		sourceColumn: First_Day_of_Class
+
+		variation Variation
+			isDefault
+			relationship: 74ef3250-e4cb-49b6-b867-fcf621969844
+			defaultHierarchy: LocalDateTable_60584bcf-ce59-41f8-baf9-82c68c953b16.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Credit_No_Credit_Deadline
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 94695a5e-382c-4474-83b1-1edd40cc2c38
+		summarizeBy: none
+		sourceColumn: Credit_No_Credit_Deadline
+
+		variation Variation
+			isDefault
+			relationship: dc73abcb-5173-41d6-a630-6a372259fff9
+			defaultHierarchy: LocalDateTable_b7bb6126-3c48-41fc-a712-aa04f1edc615.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Schedule_Changes_Drop_Add_Start
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 2ed44e61-b1bd-4e0c-9c2b-d16b06d3f05e
+		summarizeBy: none
+		sourceColumn: Schedule_Changes_Drop_Add_Start
+
+		variation Variation
+			isDefault
+			relationship: 97e894a2-1a44-4b7e-a248-763bc802fc43
+			defaultHierarchy: LocalDateTable_56ff9ccf-5187-4630-b0dc-8aa32fe1aa16.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Schedule_Changes_Drop_Add_End
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 714306f5-970c-4e67-bd93-b4f2828ea185
+		summarizeBy: none
+		sourceColumn: Schedule_Changes_Drop_Add_End
+
+		variation Variation
+			isDefault
+			relationship: dac86a95-4a68-424d-9072-a604cc1571ec
+			defaultHierarchy: LocalDateTable_4f6971f1-0ff2-42b6-8cac-79577e24bece.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Last_Day_to_Drop_Class_without_Notation_W_Deadline
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: a19e734a-b198-4938-a7a9-513ff1d7f46c
+		summarizeBy: none
+		sourceColumn: Last_Day_to_Drop_Class_without_Notation_W_Deadline
+
+		variation Variation
+			isDefault
+			relationship: f2bb5124-c467-4bff-8152-ccdf0367ce77
+			defaultHierarchy: LocalDateTable_4b0e1060-15cd-4849-bc02-bef84cedf767.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Last_Day_to_Drop_Class_without_Penalty_WF_Deadline
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: b8f7fa82-373f-4a0e-b130-4ac48c892ced
+		summarizeBy: none
+		sourceColumn: Last_Day_to_Drop_Class_without_Penalty_WF_Deadline
+
+		variation Variation
+			isDefault
+			relationship: 35d06342-0e75-4402-936a-ed55debdaf25
+			defaultHierarchy: LocalDateTable_bbe55be9-6180-440f-8984-307b8fc38bf6.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Classes_End
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 36c32073-b01e-4914-b73b-e51725be83bb
+		summarizeBy: none
+		sourceColumn: Classes_End
+
+		variation Variation
+			isDefault
+			relationship: bdd4092b-eee0-43c9-bdfa-c4542a40c9ad
+			defaultHierarchy: LocalDateTable_9ae90281-4c46-45be-b1a4-a61d8028b5b7.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Number_of_In_Class_Days
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3aa98078-d4b8-4873-91f4-3e6769f7a6de
+		summarizeBy: sum
+		sourceColumn: Number_of_In_Class_Days
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Reading_Days
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f5979de4-a0f1-4c77-9731-b3d2b7b992ae
+		summarizeBy: sum
+		sourceColumn: Number_of_Reading_Days
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Exams_Days
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: aaf1f5ff-a686-4890-b524-eaf03f3c3db5
+		summarizeBy: sum
+		sourceColumn: Number_of_Exams_Days
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Holidays_Days
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 75fcac68-6dc0-4b99-9930-fa27e1781b42
+		summarizeBy: sum
+		sourceColumn: Number_of_Holidays_Days
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Mondays
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 628acc91-06d7-4a56-b87a-f258d53a63ca
+		summarizeBy: sum
+		sourceColumn: Number_of_Mondays
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Tuesdays
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a34218c5-8145-4dd4-be8e-e89f1ecf9e21
+		summarizeBy: sum
+		sourceColumn: Number_of_Tuesdays
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Wednesdays
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e553aff3-6725-464a-88fc-dc925ab1702f
+		summarizeBy: sum
+		sourceColumn: Number_of_Wednesdays
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Thursdays
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2b5180d9-53b4-434c-8160-9727e82ffcac
+		summarizeBy: sum
+		sourceColumn: Number_of_Thursdays
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Fridays
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 08b1db05-3a05-4f07-8def-668a44baa8ab
+		summarizeBy: sum
+		sourceColumn: Number_of_Fridays
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Students_In_Cohort
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 35f1045a-7199-4d87-a40d-9d8f18c99328
+		summarizeBy: sum
+		sourceColumn: Number_of_Students_In_Cohort
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Full_Time_Students
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2b6e29c5-4f16-4602-be4e-a8c8be18c5ca
+		summarizeBy: sum
+		sourceColumn: Number_of_Full_Time_Students
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Degree_Seeking_Students
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6ea485ba-eadf-4245-8486-6fb24eb1b3f1
+		summarizeBy: sum
+		sourceColumn: Number_of_Degree_Seeking_Students
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity_Date
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 6907c5a7-82bb-423f-ae40-543b4121bbde
+		summarizeBy: none
+		sourceColumn: Activity_Date
+
+		variation Variation
+			isDefault
+			relationship: 7e6fcb00-887d-480a-9cf6-f2b12ebd7da1
+			defaultHierarchy: LocalDateTable_2d3b7f9e-f96f-497a-b592-494f60949ffe.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order_Academic_Year_And_Term
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2fe940ab-d8aa-4d66-a58b-7f44d1dfcfd9
+		summarizeBy: sum
+		sourceColumn: Order_Academic_Year_And_Term
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order_Year_And_Term
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 29abe6e7-923e-4335-bccf-deb62e3de159
+		summarizeBy: sum
+		sourceColumn: Order_Year_And_Term
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Census_Date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 22e427f4-352e-490e-aee7-1e537e22f7b7
+		summarizeBy: none
+		sourceColumn: Census_Date
+
+		variation Variation
+			isDefault
+			relationship: f2439a57-4c0a-4f07-bf20-a241b4f6e97a
+			defaultHierarchy: LocalDateTable_bb37479f-8257-4da9-b0c6-baab5608a74f.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order_College_Year_And_Term
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 32e04479-9ab8-454a-8ee2-d14310d39935
+		summarizeBy: sum
+		sourceColumn: Order_College_Year_And_Term
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Key_First_Fall
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 06292ea8-2168-4eb1-8ad2-4d5785b52845
+		summarizeBy: sum
+		sourceColumn: Term_Key_First_Fall
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Key_Second_Fall
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fe35141e-29d6-48ec-b894-59d297067f11
+		summarizeBy: sum
+		sourceColumn: Term_Key_Second_Fall
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Key_Next_Including_Summer
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4a6a824a-c1d0-4b7a-87c2-0b1f1afe4a4d
+		summarizeBy: sum
+		sourceColumn: Term_Key_Next_Including_Summer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Key_Next_Excluding_Summer
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7a58cd9c-6dc5-4d04-9bd9-67d9fbc7bdb2
+		summarizeBy: sum
+		sourceColumn: Term_Key_Next_Excluding_Summer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Key_Prev_Excluding_Summer
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b36cf1cc-a29a-4bf2-a918-dbd0dd47e30e
+		summarizeBy: sum
+		sourceColumn: Term_Key_Prev_Excluding_Summer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column College_Group
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(2)
+		lineageTag: 556b3f73-a800-4d34-a02a-c4b04850a1af
+		summarizeBy: none
+		sourceColumn: College_Group
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Year_Term_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cc5ea1a2-cc74-417e-be2b-110c0d7c02cf
+		summarizeBy: count
+		sourceColumn: Term_Year_Term_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Year_Long
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 9aabf655-59c2-48eb-a928-4e5c8f5d1d59
+		summarizeBy: none
+		sourceColumn: Academic_Year_Long
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 8f2acdf3-c6cc-4324-97bf-850d7ff1b138
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 7c9c5656-45eb-406d-95b1-5853e895a22e
+			defaultHierarchy: LocalDateTable_9173ea2f-1128-457f-87de-b298903e0459.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Year
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: 9a876598-07c8-4905-a964-a448232af737
+		summarizeBy: none
+		sourceColumn: Academic_Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Term_Key_Prev_Including_Summer
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8bd52289-97cb-4cfc-818f-9696ed3380ce
+		summarizeBy: sum
+		sourceColumn: Term_Key_Prev_Including_Summer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Aid_Year
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(4)
+		lineageTag: 25bb8e67-6ef3-40e0-8e5b-76a4b40e0f0d
+		summarizeBy: none
+		sourceColumn: Financial_Aid_Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Current_Term_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f62fc846-eef5-4cb7-a20f-4a5d9e328dc6
+		summarizeBy: sum
+		sourceColumn: Current_Term_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Current_Full_Term_Ind
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d7f36a9a-5c4f-4278-a738-3a207df02af5
+		summarizeBy: sum
+		sourceColumn: Current_Full_Term_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Graduating_Term_Ind
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dacec999-9ba7-43b6-855f-4dd553071758
+		summarizeBy: sum
+		sourceColumn: Graduating_Term_Ind
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year_And_Term
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 0c8000ef-dccc-440d-a25b-df180f6e7e7d
+		summarizeBy: none
+		sourceColumn: Year_And_Term
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Year_Descending
+		dataType: string
+		sourceProviderType: varchar(4)
+		lineageTag: f70af20d-f590-4710-900b-9654cb05f25b
+		summarizeBy: none
+		sourceColumn: Academic_Year_Descending
+
+		annotation SummarizationSetBy = Automatic
+
+	column Academic_Year_Descending_Sort_Order
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 31d5b259-1f20-4cdb-b7d7-223ed43d18a3
+		summarizeBy: sum
+		sourceColumn: Academic_Year_Descending_Sort_Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column Current_Academic_Year_Offset
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e7ed3a35-5806-4302-a6ab-3a939095072d
+		summarizeBy: sum
+		sourceColumn: Current_Academic_Year_Offset
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Academic_Term_Dim-dff97916-0a4a-4437-ad01-2d4bce933f04' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Academic_Term_Dim = Source{[Schema="DWH",Item="Academic_Term_Dim"]}[Data]
+				in
+				    DWH_Academic_Term_Dim
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

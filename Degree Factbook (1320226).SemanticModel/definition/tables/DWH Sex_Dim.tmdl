@@ -1,0 +1,48 @@
+table 'DWH Sex_Dim'
+	lineageTag: 1e4a0388-1664-44e0-a382-43ef6f82aa29
+
+	column Sex_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 66c7fe1e-6782-4136-b71d-fa4b840cd94a
+		summarizeBy: none
+		sourceColumn: Sex_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sex_Code
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(10)
+		lineageTag: 31555663-6687-491d-94b4-71e91b67b51c
+		summarizeBy: none
+		sourceColumn: Sex_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sex_Description
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(50)
+		lineageTag: 90b41e04-5798-4661-a986-71d250ff7e9c
+		summarizeBy: none
+		sourceColumn: Sex_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Sex_Dim-80529d3d-98cc-4e79-9dfc-517ca272c6fa' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Sex_Dim = Source{[Schema="DWH",Item="Sex_Dim"]}[Data]
+				in
+				    DWH_Sex_Dim
+
+	annotation PBI_ResultType = Table
+

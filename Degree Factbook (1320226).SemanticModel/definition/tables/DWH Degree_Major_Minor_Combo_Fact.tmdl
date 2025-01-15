@@ -1,0 +1,92 @@
+table 'DWH Degree_Major_Minor_Combo_Fact'
+	lineageTag: 2bd4734a-57d5-413f-805f-db9012f1aadf
+
+	column Degree_Major_Minor_Combo_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: bc9c99f9-bbd7-4b3a-af7d-4b926a3207ea
+		summarizeBy: count
+		sourceColumn: Degree_Major_Minor_Combo_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Fact_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 082399f1-c756-4157-b58f-feac559a08bd
+		summarizeBy: none
+		sourceColumn: Degree_Fact_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bf8a6c6a-20df-4a7b-bf41-87db4fa7e714
+		summarizeBy: none
+		sourceColumn: Major_Minor_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_Combo_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 04f40bed-0564-4284-a098-85f84c1ec564
+		summarizeBy: none
+		sourceColumn: Major_Minor_Combo_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_Minor_Combo_Type
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: 2fb3fd2d-c4c4-4365-880c-a168eb8a279f
+		summarizeBy: none
+		sourceColumn: Major_Minor_Combo_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: cf31fc2b-b543-4b4a-9b81-be2939234cd1
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 54d946ba-9775-4fb8-a8d5-b39403bd0385
+			defaultHierarchy: LocalDateTable_455747b9-97c1-44ba-b921-7f924f52ba34.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Degree_Major_Minor_Combo_Fact' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Degree_Major_Minor_Combo_Fact = Source{[Schema="DWH",Item="Degree_Major_Minor_Combo_Fact"]}[Data]
+				in
+				    DWH_Degree_Major_Minor_Combo_Fact
+

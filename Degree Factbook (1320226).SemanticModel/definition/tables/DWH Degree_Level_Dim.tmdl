@@ -1,0 +1,77 @@
+table 'DWH Degree_Level_Dim'
+	lineageTag: 2a13d52d-ec03-4de3-b1c2-a6f17bd44868
+
+	column Degree_Level_Key
+		dataType: int64
+		isHidden
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 113b06b3-5e2b-46d8-aead-daec8dbb3431
+		summarizeBy: none
+		sourceColumn: Degree_Level_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Level_Code
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 21d3bbb9-d965-47c4-8879-0483a93a24b0
+		summarizeBy: none
+		sourceColumn: Degree_Level_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Level
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 12d4971a-bd7e-431a-9075-17eb199b26aa
+		summarizeBy: none
+		sourceColumn: Degree_Level
+		sortByColumn: Degree_Level_Order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Degree_Level_Order
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e9733443-2b2f-4cf9-8187-b81a0bdda7f7
+		summarizeBy: none
+		sourceColumn: Degree_Level_Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column IPEDS_Award_Level
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: db99d1a1-86a9-43df-a19d-33462828ccd6
+		summarizeBy: none
+		sourceColumn: IPEDS_Award_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column Consolidated_Award_Level
+		dataType: string
+		sourceProviderType: varchar(1)
+		lineageTag: 32ddb848-d612-4086-8c75-7a157d419007
+		summarizeBy: none
+		sourceColumn: Consolidated_Award_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DWH Degree_Level_Dim-ffa80f95-6272-49a1-b44c-a9ea608ac562' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    DWH_Degree_Level_Dim = Source{[Schema="DWH",Item="Degree_Level_Dim"]}[Data]
+				in
+				    DWH_Degree_Level_Dim
+
+	annotation PBI_ResultType = Table
+

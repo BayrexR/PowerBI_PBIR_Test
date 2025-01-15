@@ -1,0 +1,382 @@
+relationship fde66b1f-33bf-46c3-8300-afe6ba5f03ed
+	fromColumn: 'DWH Degree_Fact'.Sex_Key
+	toColumn: 'DWH Sex_Dim'.Sex_Key
+
+relationship 81509c2a-247d-4759-8f73-c70235800d80
+	fromColumn: 'DWH Degree_Fact'.Student_Key
+	toColumn: 'DWH Student_Dim'.Student_Key
+
+relationship b8544534-b477-4f8a-b839-ea2c8e21c7cc
+	fromColumn: 'DWH Degree_Fact'.College_Key
+	toColumn: 'DWH College_Dim'.College_Key
+
+relationship 54011aab-a8da-4b62-ae95-48ce260b81e3
+	fromColumn: 'DWH Degree_Fact'.Degree_Status_Key
+	toColumn: 'DWH Degree_Status_Dim'.Degree_Status_Key
+
+relationship 4c660a62-7fa4-4a70-a3f8-e20d028d3eac
+	fromColumn: 'DWH Degree_Fact'.Degree_Key
+	toColumn: 'DWH Degree_Dim'.Degree_Key
+
+relationship e1c730b2-7dfd-438e-85d3-b8bca32e6df7
+	fromColumn: 'DWH Degree_Fact'.Degree_Level_Key
+	toColumn: 'DWH Degree_Level_Dim'.Degree_Level_Key
+
+relationship 1560a20a-37ac-4ab5-b953-79ee0b275634
+	fromColumn: 'DWH Degree_Fact'.Student_Level_Key
+	toColumn: 'DWH Student_Level_Dim'.Student_Level_Key
+
+relationship ae89bd1b-7d5e-4b7c-b926-83cc829c1946
+	fromColumn: 'DWH Degree_Fact'.Graduation_Term_Key
+	toColumn: 'DWH Academic_Term_Dim'.Term_Key
+
+relationship 73d8478f-7c13-4efc-89ca-482fd0c4dd82
+	fromColumn: 'DWH Degree_Fact'.Major_Minor_1_2_Key
+	toColumn: 'DWH Major_Dim_Minor_1_2'.Major_Key
+
+relationship ad4775b4-952f-4c2f-857e-e8bbcebbe80b
+	fromColumn: 'DWH Degree_Fact'.Major_1_2_Key
+	toColumn: 'DWH Major_Dim_Major_1_2'.Major_Key
+
+relationship 98f4d3e6-5306-407c-bc4b-2a42ed53c840
+	fromColumn: 'DWH Degree_Fact'.Major_Minor_1_Key
+	toColumn: 'DWH Major_Dim_Minor_1'.Major_Key
+
+relationship 1f1f6a9e-e5df-4441-8274-4d6dbd73113f
+	fromColumn: 'DWH Degree_Fact'.Major_1_Key
+	toColumn: 'DWH Major_Dim_Major_1'.Major_Key
+
+relationship 430c55f9-b874-a678-e16d-4e74e31eed62
+	toCardinality: many
+	fromColumn: 'DWH Degree_Fact'.Degree_Fact_Key
+	toColumn: 'DWH Degree_Major_Fact'.Degree_Fact_Key
+
+relationship ef6d9f9f-ccb1-b2d1-d251-7df5a52fd185
+	fromColumn: 'DWH Degree_Major_Fact'.Major_Key
+	toColumn: 'DWH Major_Dim'.Major_Key
+
+relationship 435ef268-f131-45e1-865b-5a9fd65d2994
+	fromColumn: 'DWH Degree_Major_Fact'.Major_Type
+	toColumn: 'DWH Major_Type_Dim'.Major_Type
+
+relationship 2176f3a0-6fb2-135d-0baf-d651ca32246f
+	fromColumn: 'DWH Degree_Major_Fact'.Minor_Key
+	toColumn: 'DWH Minor_Dim'.Major_Key
+
+relationship aebe0380-450e-4716-bd24-8eeba53a913f
+	fromColumn: 'DWH Degree_Fact'.Student_Type_Key
+	toColumn: 'DWH Student_Type_Dim'.Student_Type_Key
+
+relationship d9e7741a-5e4e-478e-6d49-e645457ec0ce
+	toCardinality: many
+	fromColumn: 'DWH Degree_Fact'.Degree_Fact_Key
+	toColumn: 'DWH Degree_Graduation_Year_Fact'.Degree_Fact_Key
+
+relationship f9f48b25-982a-caf0-c870-061a670efe9d
+	toCardinality: many
+	fromColumn: 'DWH Degree_Fact'.Degree_Fact_Key
+	toColumn: 'DWH Degree_Major_Minor_Combo_Fact'.Degree_Fact_Key
+
+relationship ffc07114-53a4-48f6-8bef-ebdd861a4c12
+	fromColumn: 'DWH Degree_Major_Minor_Combo_Fact'.Major_Minor_Key
+	toColumn: 'DWH Major_Minor_Combo_Primary_Dim'.Major_Key
+
+relationship 071c41aa-dae0-4920-b94f-33a205c32311
+	fromColumn: 'DWH Degree_Major_Minor_Combo_Fact'.Major_Minor_Combo_Key
+	toColumn: 'DWH Major_Minor_Combo_Secondary_Dim'.Major_Key
+
+relationship 3688adba-d0e1-45a6-929d-f9865f8d0571
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Birth_Date
+	toColumn: LocalDateTable_872569ac-657d-426e-b4f1-de428cdc8404.Date
+
+relationship 408c1bb9-1f63-4792-8e8b-10635dd8aa87
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Deceased_Date
+	toColumn: LocalDateTable_d374da25-3649-4a5c-abda-60a020518896.Date
+
+relationship bfbd338a-cc7b-435c-b2f3-d9c39a77645c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.High_School_Graduation_Date
+	toColumn: LocalDateTable_18c6c88b-a3cb-4025-98d1-477a0035c0e3.Date
+
+relationship e7ffc41c-01d8-4032-9e37-d1d6d02e8acd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.High_School_Transcript_Date
+	toColumn: LocalDateTable_83cc8f35-bc0f-4a53-9a2c-7c4f6c739aa8.Date
+
+relationship 1be05828-da06-4397-8e3a-5c2ecc5d2e6a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Application_Date
+	toColumn: LocalDateTable_0564416c-efce-4192-be8e-797636a87f68.Date
+
+relationship 85dd7e2f-0ad9-44ba-82bc-db4f39baf409
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Application_Decision_Date
+	toColumn: LocalDateTable_38a121f3-8ec0-4ee9-82b0-5a4669aa1c02.Date
+
+relationship 5d018d3e-b007-4ff3-afd9-a947bcfd9569
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Associate_Degree_Date
+	toColumn: LocalDateTable_fcaa971a-79b3-4dac-b786-6811de732162.Date
+
+relationship 43b61a11-3603-42d0-8ad0-4868e958f67e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Bachelor_Degree_Date
+	toColumn: LocalDateTable_afd79adf-6abb-484e-94bc-e94fde4e17be.Date
+
+relationship 591217ca-ede7-4fc1-95aa-8054a38f6e0f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Master_Degree_Date
+	toColumn: LocalDateTable_04de55bb-2a6b-417c-869a-b48e08edfcad.Date
+
+relationship 2abb2fa0-f6eb-4b85-8e32-13e7cf6587c8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Doctorate_Degree_Date
+	toColumn: LocalDateTable_95b2db75-90cc-43cc-a3ad-da551edf36a2.Date
+
+relationship 228417d2-64c8-4733-b61a-817d13d9d01c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Graduation_Date_Expected
+	toColumn: LocalDateTable_3fba2735-1239-4242-8484-3dcf1bd9da3d.Date
+
+relationship 12429bb3-7e4a-41c8-8c0f-9e9805e82417
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.Activity_Timestamp
+	toColumn: LocalDateTable_70c0d131-fbc4-4777-af03-964c31da827b.Date
+
+relationship c5c113f0-6e68-4dc7-8aa0-7ed1cb22a9c2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Student_Dim'.ETL_Timestamp
+	toColumn: LocalDateTable_ab53b63e-7191-43b1-84bf-359826f64735.Date
+
+relationship 696619e8-fcb0-4233-b5cd-7434a41657d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Term_Start_Date
+	toColumn: LocalDateTable_360b6d01-5d60-40fc-b4c2-d979d4b483c3.Date
+
+relationship 4ddd8ec8-32bb-41ca-bf67-e9a847ed1d1c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Term_End_Date
+	toColumn: LocalDateTable_3459d178-5077-48c0-8011-96d1b955c178.Date
+
+relationship 778aa08e-38a0-4d2c-9c0c-7837d85dd270
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Housing_Start_Date
+	toColumn: LocalDateTable_5bfbab18-fe50-4839-b7ee-2d1b70fa8600.Date
+
+relationship a6d18881-ff81-40db-9ff6-34182f84a286
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Housing_End_Date
+	toColumn: LocalDateTable_68a258f2-ed46-42b2-a80b-fce7bbeb7efc.Date
+
+relationship ce542f20-a27f-41a0-abd0-e3aeb506e576
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.New_International_Students_Report
+	toColumn: LocalDateTable_6926b201-5f33-43a2-a3f7-952e41f64513.Date
+
+relationship ad709708-564b-4a8f-8162-5f5cfc0c7499
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.New_Students_Report
+	toColumn: LocalDateTable_2dcbc95c-ceef-47b3-a1ae-d92047351c20.Date
+
+relationship b9287552-3ac5-41f3-a344-4ed9839b90c9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Returning_Students_Report
+	toColumn: LocalDateTable_a6c9aed1-694c-4fdb-93f2-e4c0ed0c25ba.Date
+
+relationship 74ef3250-e4cb-49b6-b867-fcf621969844
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.First_Day_of_Class
+	toColumn: LocalDateTable_60584bcf-ce59-41f8-baf9-82c68c953b16.Date
+
+relationship dc73abcb-5173-41d6-a630-6a372259fff9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Credit_No_Credit_Deadline
+	toColumn: LocalDateTable_b7bb6126-3c48-41fc-a712-aa04f1edc615.Date
+
+relationship 97e894a2-1a44-4b7e-a248-763bc802fc43
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Schedule_Changes_Drop_Add_Start
+	toColumn: LocalDateTable_56ff9ccf-5187-4630-b0dc-8aa32fe1aa16.Date
+
+relationship dac86a95-4a68-424d-9072-a604cc1571ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Schedule_Changes_Drop_Add_End
+	toColumn: LocalDateTable_4f6971f1-0ff2-42b6-8cac-79577e24bece.Date
+
+relationship f2bb5124-c467-4bff-8152-ccdf0367ce77
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Last_Day_to_Drop_Class_without_Notation_W_Deadline
+	toColumn: LocalDateTable_4b0e1060-15cd-4849-bc02-bef84cedf767.Date
+
+relationship 35d06342-0e75-4402-936a-ed55debdaf25
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Last_Day_to_Drop_Class_without_Penalty_WF_Deadline
+	toColumn: LocalDateTable_bbe55be9-6180-440f-8984-307b8fc38bf6.Date
+
+relationship bdd4092b-eee0-43c9-bdfa-c4542a40c9ad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Classes_End
+	toColumn: LocalDateTable_9ae90281-4c46-45be-b1a4-a61d8028b5b7.Date
+
+relationship 7e6fcb00-887d-480a-9cf6-f2b12ebd7da1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Activity_Date
+	toColumn: LocalDateTable_2d3b7f9e-f96f-497a-b592-494f60949ffe.Date
+
+relationship f2439a57-4c0a-4f07-bf20-a241b4f6e97a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.Census_Date
+	toColumn: LocalDateTable_bb37479f-8257-4da9-b0c6-baab5608a74f.Date
+
+relationship 7c9c5656-45eb-406d-95b1-5853e895a22e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Academic_Term_Dim'.ETL_Timestamp
+	toColumn: LocalDateTable_9173ea2f-1128-457f-87de-b298903e0459.Date
+
+relationship e0051752-469f-4744-8848-76cb714ffcab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Degree_Status_Dim'.ETL_Timestamp
+	toColumn: LocalDateTable_d4d92899-702f-41bc-9435-41a928127c58.Date
+
+relationship 50155805-687e-4604-99fe-79e0f4690449
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim_Major_1'.Activity_Date
+	toColumn: LocalDateTable_b28cf827-f8ef-4829-819b-baf02558ae7d.Date
+
+relationship 5c7a3793-255b-4585-a1de-90c192d07d4d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim_Major_1'.ETL_Timestamp
+	toColumn: LocalDateTable_0ed03d9b-2e11-4b1b-b305-2c7a7e23044f.Date
+
+relationship efa98496-8979-425d-9a6f-e6252da80218
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim_Major_1_2'.Activity_Date
+	toColumn: LocalDateTable_22e8bd8b-7006-4f5d-b77d-ba16fbe6faff.Date
+
+relationship 381291c9-37e0-413e-80ab-f879b452c222
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim_Major_1_2'.ETL_Timestamp
+	toColumn: LocalDateTable_312d200e-5363-4eea-8e58-125efc65da51.Date
+
+relationship 8d5f6243-c3bb-4a29-8602-98d93b3c6738
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim_Minor_1_2'.Activity_Date
+	toColumn: LocalDateTable_5938a34d-05fe-44e9-93eb-f4ec7be42660.Date
+
+relationship a3a7c118-707b-4e5b-8aae-5cd4f0e491da
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim_Minor_1_2'.ETL_Timestamp
+	toColumn: LocalDateTable_ea7aea6b-bdad-4980-8ed3-995bf0da829c.Date
+
+relationship db49dddc-611d-49c6-ab53-1394e5fcdb3f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim_Minor_1'.Activity_Date
+	toColumn: LocalDateTable_f374ffcd-276c-44da-9906-f6d796df34e2.Date
+
+relationship 44106667-172d-4a18-bbd6-ef53911f3ebc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim_Minor_1'.ETL_Timestamp
+	toColumn: LocalDateTable_2644ad2e-fdbc-48b5-b2f5-e9e2954540cd.Date
+
+relationship 34e3769f-ea13-4e69-a159-0a9f5008ab87
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Degree_Fact'.Degree_Application_Date
+	toColumn: LocalDateTable_a210ffa2-b81f-4a9f-83a1-fd09c54d3de9.Date
+
+relationship b7c81834-63a7-43c0-bd62-37e08c4b899c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Degree_Fact'.Graduation_Date
+	toColumn: LocalDateTable_0ce0815c-4f68-4381-b769-b82cfad0bd62.Date
+
+relationship 9f90204a-acae-44c5-a2fb-f973346aa0db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Degree_Fact'.Activity_Date
+	toColumn: LocalDateTable_7c767321-d67c-40a5-a4c9-f5cc1a636c0a.Date
+
+relationship 50a4b02c-6071-4817-ae7b-3b64a2f2d8d8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Degree_Fact'.ETL_Timestamp
+	toColumn: LocalDateTable_9d776ed9-a606-4f37-b795-7e92db2c6aac.Date
+
+relationship bd3646e4-de0b-46d5-a314-03fa9a6b1763
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim'.Activity_Date
+	toColumn: LocalDateTable_56b2adc7-8088-41f8-82ae-54e3e768f72d.Date
+
+relationship 8e301589-e6de-4b56-a79c-7c93612c7d2f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Dim'.ETL_Timestamp
+	toColumn: LocalDateTable_8f970035-1f4f-4af5-98c1-dd0cb8c33d17.Date
+
+relationship 6b557b5e-04da-448b-ad63-dcedd2eafc69
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Degree_Major_Fact'.ETL_Timestamp
+	toColumn: LocalDateTable_c876d008-2333-4656-86c0-af6ca83e7926.Date
+
+relationship 3f20f01b-2a26-454f-b477-19b9efd471c2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Minor_Dim'.Activity_Date
+	toColumn: LocalDateTable_06945fc2-2278-4f36-bde5-4c1f7d5d10ae.Date
+
+relationship 1af21f3b-033c-48e1-ac52-754d93b7b968
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Minor_Dim'.ETL_Timestamp
+	toColumn: LocalDateTable_c6737781-39da-4b5f-b797-3fc30493d020.Date
+
+relationship ac28a514-7c17-4285-abc6-eef23b813d0e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Degree_Graduation_Year_Fact'.ETL_Timestamp
+	toColumn: LocalDateTable_95cf3257-15b3-4e51-8e26-914bc3701745.Date
+
+relationship 54d946ba-9775-4fb8-a8d5-b39403bd0385
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Degree_Major_Minor_Combo_Fact'.ETL_Timestamp
+	toColumn: LocalDateTable_455747b9-97c1-44ba-b921-7f924f52ba34.Date
+
+relationship 1a13b9e3-6b32-4376-adb3-6355e85b9d0f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Minor_Combo_Primary_Dim'.Activity_Date
+	toColumn: LocalDateTable_0c5dd08e-526b-4358-ab04-e47cae6ee7c1.Date
+
+relationship fbb9bf45-294d-49cf-ba6d-806433dc0841
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Minor_Combo_Primary_Dim'.ETL_Timestamp
+	toColumn: LocalDateTable_bcf03da2-9333-4bc0-91e4-b3c33e310434.Date
+
+relationship cc860250-c32d-47f2-9bcf-daedf53f1cb1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Minor_Combo_Secondary_Dim'.Activity_Date
+	toColumn: LocalDateTable_f6060d8c-dfb0-4ee4-85ab-5699fcbf0f60.Date
+
+relationship 956c86bb-914f-4f72-be70-baa09f934eef
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DWH Major_Minor_Combo_Secondary_Dim'.ETL_Timestamp
+	toColumn: LocalDateTable_c22e67eb-4c7e-4b22-8d19-92badfa3beaa.Date
+
+relationship f9d788fc-dfbc-43fe-a58f-a524b1cb76ed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Metadata Glossary'.definition_created_date
+	toColumn: LocalDateTable_438904a2-47f9-4805-bdd7-7537afd99403.Date
+
+relationship 05202548-82a5-4d17-a242-b64f5692ba95
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Metadata Glossary'.definition_updated_date
+	toColumn: LocalDateTable_7aea766c-8c7e-4de2-a070-4fbe4053133f.Date
+
+relationship 55c99c3b-8dba-4f5c-a83c-6525310a555b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Metadata Glossary'.version_created_date
+	toColumn: LocalDateTable_cee7ae6a-1d63-4be9-8f2e-412ddb11093f.Date
+
+relationship 717657f6-a248-4543-b021-e4fe24616108
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Metadata Glossary'.version_updated_date
+	toColumn: LocalDateTable_aee5bd4b-44a4-4baf-bd71-6903857eff8a.Date
+
+relationship ad8b4144-7383-4d7b-afeb-5140c23c0097
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Metadata Glossary'.ETL_Timestamp
+	toColumn: LocalDateTable_eb7cdb82-dfb2-4432-bc23-ab59f4891a70.Date
+

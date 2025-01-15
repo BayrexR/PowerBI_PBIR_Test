@@ -1,0 +1,324 @@
+table 'Metadata Glossary'
+	lineageTag: b378bfa0-3e7c-4ae2-b137-6fc97550822f
+
+	column definition_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 70fdf191-776e-4d92-bc5c-a297a62b68b7
+		summarizeBy: sum
+		sourceColumn: definition_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_id
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a93e6d70-1287-4531-bfd6-50aa36cb900a
+		summarizeBy: sum
+		sourceColumn: version_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_number
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0264bedc-1c04-422b-aedd-f5a2fe53fc92
+		summarizeBy: sum
+		sourceColumn: version_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_status
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: e3103360-2629-4800-b98d-799e3c7ad358
+		summarizeBy: none
+		sourceColumn: version_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 08d26852-1acd-4ae0-bea5-829feabb179d
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column functional_areas
+		dataType: string
+		sourceProviderType: text
+		lineageTag: 35937fb2-826b-4c6b-b2ce-22bec8cd14f3
+		summarizeBy: none
+		sourceColumn: functional_areas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_Phrase
+		dataType: string
+		sourceProviderType: text
+		lineageTag: 1675a893-35a7-4b6a-bcab-8bd8a19269af
+		summarizeBy: none
+		sourceColumn: Question_Phrase
+
+		annotation SummarizationSetBy = Automatic
+
+	column functional_definition
+		dataType: string
+		sourceProviderType: text
+		lineageTag: c4455cf2-2ec1-4f59-b764-fcd676cc6ad5
+		summarizeBy: none
+		sourceColumn: functional_definition
+
+		annotation SummarizationSetBy = Automatic
+
+	column plain_txt_func_def
+		dataType: string
+		sourceProviderType: text
+		lineageTag: 203d73a4-7634-45b4-be83-1a33f6d7e461
+		summarizeBy: none
+		sourceColumn: plain_txt_func_def
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 703f6dde-efad-43c8-894c-00216ffa1130
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column classification
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 051e5b21-8b3c-4cc5-94aa-3eda6cc1bb9b
+		summarizeBy: none
+		sourceColumn: classification
+
+		annotation SummarizationSetBy = Automatic
+
+	column classification_ordered
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 40bae6c0-4669-428f-b47b-161b25a14050
+		summarizeBy: sum
+		sourceColumn: classification_ordered
+
+		annotation SummarizationSetBy = Automatic
+
+	column synonyms
+		dataType: string
+		sourceProviderType: text
+		lineageTag: cb1d25cf-5d0b-45e2-b42e-254b71163919
+		summarizeBy: none
+		sourceColumn: synonyms
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_systems
+		dataType: string
+		sourceProviderType: text
+		lineageTag: 60941513-2842-40bf-a66c-828d61df3a72
+		summarizeBy: none
+		sourceColumn: data_systems
+
+		annotation SummarizationSetBy = Automatic
+
+	column tags
+		dataType: string
+		sourceProviderType: varchar(341)
+		lineageTag: e9607803-55f8-4bc5-9159-d7a5baac8a9e
+		summarizeBy: none
+		sourceColumn: tags
+
+		annotation SummarizationSetBy = Automatic
+
+	column definition_created_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 7dc38002-bb69-410a-b2a0-7ddf3c6ec68e
+		summarizeBy: none
+		sourceColumn: definition_created_date
+
+		variation Variation
+			isDefault
+			relationship: f9d788fc-dfbc-43fe-a58f-a524b1cb76ed
+			defaultHierarchy: LocalDateTable_438904a2-47f9-4805-bdd7-7537afd99403.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column definition_updated_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: bd330da6-aa91-4b72-a440-a80d17b5951c
+		summarizeBy: none
+		sourceColumn: definition_updated_date
+
+		variation Variation
+			isDefault
+			relationship: 05202548-82a5-4d17-a242-b64f5692ba95
+			defaultHierarchy: LocalDateTable_7aea766c-8c7e-4de2-a070-4fbe4053133f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_created_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: be4ced26-3875-42f4-a3ed-db9d2b3e6c7e
+		summarizeBy: none
+		sourceColumn: version_created_date
+
+		variation Variation
+			isDefault
+			relationship: 55c99c3b-8dba-4f5c-a83c-6525310a555b
+			defaultHierarchy: LocalDateTable_cee7ae6a-1d63-4be9-8f2e-412ddb11093f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_created_by
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 1d646830-0c26-42a2-80c2-83074c3072a6
+		summarizeBy: none
+		sourceColumn: version_created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_updated_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: ae8b5f23-ab4e-4107-9a0d-090ea3b5f570
+		summarizeBy: none
+		sourceColumn: version_updated_date
+
+		variation Variation
+			isDefault
+			relationship: 717657f6-a248-4543-b021-e4fe24616108
+			defaultHierarchy: LocalDateTable_aee5bd4b-44a4-4baf-bd71-6903857eff8a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_updated_by
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 4eba14e4-60ec-4c42-bc81-cfe977c163a0
+		summarizeBy: none
+		sourceColumn: version_updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_latest_approved
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d122084d-21aa-4196-bcc7-150c6849f8b2
+		summarizeBy: sum
+		sourceColumn: version_latest_approved
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_in_queue
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c2cde68b-b753-4e67-890b-520444e36f17
+		summarizeBy: sum
+		sourceColumn: version_in_queue
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_in_draft
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2ed81f63-5253-46ea-b9da-db0615a7ec30
+		summarizeBy: sum
+		sourceColumn: version_in_draft
+
+		annotation SummarizationSetBy = Automatic
+
+	column workflow_name
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 6d6b8ceb-b2cd-4274-b74c-651b55b36fc8
+		summarizeBy: none
+		sourceColumn: workflow_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_request_type
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(6)
+		lineageTag: 83461e71-c6fa-4cf9-aad9-a17fd544b3ee
+		summarizeBy: none
+		sourceColumn: version_request_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column subdomain
+		dataType: string
+		sourceProviderType: varchar(64)
+		lineageTag: 87de2588-b9f2-46ea-bd7d-d0b3203bc26b
+		summarizeBy: none
+		sourceColumn: subdomain
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_url
+		dataType: string
+		sourceProviderType: varchar(140)
+		lineageTag: f6b24bf7-bba2-4056-b1af-0b09f4f43caf
+		summarizeBy: none
+		sourceColumn: version_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column definition_url
+		dataType: string
+		sourceProviderType: varchar(119)
+		lineageTag: 99662491-0e1f-4883-89bc-f7a0c71a588d
+		summarizeBy: none
+		sourceColumn: definition_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETL_Timestamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 8f455791-8d68-4e97-9a71-397fb2107753
+		summarizeBy: none
+		sourceColumn: ETL_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: ad8b4144-7383-4d7b-afeb-5140c23c0097
+			defaultHierarchy: LocalDateTable_eb7cdb82-dfb2-4432-bc23-ab59f4891a70.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Metadata Glossary' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("dwhproddb01.database.windows.net", "datawhprod"),
+				    Metadata_Glossary = Source{[Schema="Metadata",Item="Glossary"]}[Data]
+				in
+				    Metadata_Glossary
+
